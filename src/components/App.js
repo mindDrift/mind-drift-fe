@@ -11,7 +11,7 @@ const App = () => {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/breathe'>
-            <Breathe inhale={3} exhale={4} holdIn={2} holdOut={2} />
+            <Breathe inhale={3} exhale={4} holdIn={2} holdOut={0} endTime={12} />
           </Route>
         </Switch>
 

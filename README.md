@@ -1,1 +1,3 @@
-# mind-drift-fe
+# mindDrift Front-End
+## Authors: Abbey Masters, Maeve Griffin, Dave Trost
+

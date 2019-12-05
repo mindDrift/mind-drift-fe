@@ -25,7 +25,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "@auth0/auth0-spa-js": "^1.6.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.7.4",
     "@babel/plugin-proposal-class-properties": "^7.7.4",

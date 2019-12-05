@@ -4,6 +4,8 @@ import { Router, Route, Switch } from 'react-router-dom';
 import Profile from './Profile';
 import history from '../utils/history';
 import { useAuth0 } from '../react-auth0-spa';
+import PrivateRoute from './PrivateRoute';
+import Home from './Home';
 
 const App = () => {
   const { loading } = useAuth0(); 
@@ -20,7 +22,8 @@ const App = () => {
         </header>
         <Switch>
           <Route exact path='/' />
-          <Route path='/profile' component={Profile} />
+          <PrivateRoute path='/profile' component={Profile} />
+          <PrivateRoute path='/home' component={Home} />
         </Switch>
       </Router>
     </div>

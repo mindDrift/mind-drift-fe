@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAuth0 } from '../react-auth0-spa';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const { loading } = useAuth0();
@@ -10,7 +11,9 @@ const Home = () => {
 
   return (
     <>
-      <h1>Home</h1>
+      <Link to="/breathe">
+        <button>Breathe</button>
+      </Link>
     </>
   );
 };

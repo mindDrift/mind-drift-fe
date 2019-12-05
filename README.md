@@ -1,3 +1,3 @@
 # mindDrift Front-End
-## Authors: Abbey Masters, Maeve Griffin, Dave Trost
+## Creators: Abbey Masters, Maeve Griffin, Dave Trost
 

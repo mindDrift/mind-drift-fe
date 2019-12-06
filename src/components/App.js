@@ -13,7 +13,6 @@ const App = () => {
     return <div>loading ...</div>;
   }
 
-
   return (
     <div>
       <Router >

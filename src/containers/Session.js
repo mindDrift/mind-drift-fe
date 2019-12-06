@@ -1,29 +1,47 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import Breathe from '../components/Breathe';
 import WrapUp from '../components/WrapUp';
 import { useAuth0 } from '../react-auth0-spa';
+import { postSession } from '../services/session';
 
-const Session = () => {
+const Session = ({ history }) => {
   const { user } = useAuth0();
   const [endSession, setEndSession] = useState(false);
+  const [startTime] = useState(new Date());
+  const [duration, setDuration] = useState(0);
 
-  const handleEndSession = () => {
+  const handleEndSession = (duration) => {
     setEndSession(true);
+    setDuration(duration);
     console.log(`${user.sub} ended session`);
   };
-
+  const settings = {
+    inhale: 3,
+    holdIn: 2,
+    exhale: 4,
+    holdOut: 2,
+    endTime: 12
+  };
   const handleSubmit = () => {
     console.log('post session');
+    postSession(startTime, duration, user.sub, settings);
     history.push('/');
   };
 
   return (
     <>
-      <Breathe handleEndSession={handleEndSession} inhale={3} exhale={4} holdIn={2} holdOut={0} endTime={12} />
+      <Breathe handleEndSession={handleEndSession} settings={settings} />
       {endSession && <WrapUp handleSubmit={handleSubmit} />}
     </>
   );
+};
+
+Session.propTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired
+  })
 };
 
 export default withRouter(Session);

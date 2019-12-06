@@ -6,7 +6,6 @@ import NavBar from './NavBar';
 import Home from './Home';
 import Profile from './Profile';
 import Session from '../containers/Session';
-import createBrowserHistory from '../utils/history';
 
 const App = () => {
   const { loading } = useAuth0();
@@ -15,11 +14,10 @@ const App = () => {
     return <div>loading ...</div>;
   }
 
-  const customHistory = createBrowserHistory();
 
   return (
     <div>
-      <Router history={customHistory}>
+      <Router >
         <header>
           <NavBar />
         </header>

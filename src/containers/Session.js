@@ -15,7 +15,6 @@ const Session = ({ history }) => {
   const handleEndSession = (duration) => {
     setEndSession(true);
     setDuration(duration);
-    console.log(`${user.sub} ended session`);
   };
   const settings = {
     inhale: 3,
@@ -25,7 +24,6 @@ const Session = ({ history }) => {
     endTime: 180
   };
   const handleSubmit = () => {
-    console.log('post session');
     postSession(startTime, duration, user.sub, settings);
     history.push('/');
   };

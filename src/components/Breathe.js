@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-const Breathe = ({ inhale, exhale, holdIn, holdOut, endTime }) => {
+const Breathe = ({ inhale, exhale, holdIn, holdOut, endTime, userId }) => {
   const [counter, setCounter] = useState(0);
   const [time, setTime] = useState(0);
   const [index, setIndex] = useState(0);
@@ -31,6 +31,7 @@ const Breathe = ({ inhale, exhale, holdIn, holdOut, endTime }) => {
 
   return (
     <div>
+      <p>user id: {userId}</p>
       <p>{actionArr[index]}</p>
       <p>{counter}</p>
       {!endSession && <button onClick={() => setEndSession(true)}>Close</button>}
@@ -45,6 +46,7 @@ Breathe.propTypes = {
   holdIn: PropTypes.number.isRequired,
   holdOut: PropTypes.number.isRequired,
   endTime: PropTypes.number.isRequired,
+  userId: PropTypes.string.isRequired,
 };
 
 export default Breathe;

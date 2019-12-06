@@ -11,7 +11,6 @@ import Breathe from './Breathe';
 const App = () => {
   const { loading, user } = useAuth0(); 
  
-  // console.log(user.sub);
   if(loading) {
     return <div>loading ...</div>;
   }
@@ -26,7 +25,7 @@ const App = () => {
           <PrivateRoute exact path='/' component={Home} />
           <PrivateRoute path='/profile' component={Profile} />
           <PrivateRoute path='/breathe'>
-            <Breathe inhale={3} exhale={4} holdIn={2} holdOut={0} endTime={12} />
+            <Breathe inhale={3} exhale={4} holdIn={2} holdOut={0} endTime={12} userId={user && user.sub || ''} />
           </PrivateRoute>
         </Switch>
       </Router>

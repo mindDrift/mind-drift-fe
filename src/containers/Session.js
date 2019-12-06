@@ -22,7 +22,7 @@ const Session = ({ history }) => {
     holdIn: 2,
     exhale: 4,
     holdOut: 2,
-    endTime: 12
+    endTime: 180
   };
   const handleSubmit = () => {
     console.log('post session');

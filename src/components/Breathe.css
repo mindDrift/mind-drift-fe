@@ -1,0 +1,21 @@
+@import './vars.css';
+
+.Breathe {
+
+  border: 3px var(--light-green) solid;
+  
+  background-color: var(--light-grey);
+
+  text-align: center;
+}
+
+.Animate {
+  height: 25px;
+  width: 25px;
+  background-color: var(--rust);
+  border-radius: 50%;
+  display: inline-block;
+
+  margin-top: 3em;
+  margin-bottom: 1em;
+}

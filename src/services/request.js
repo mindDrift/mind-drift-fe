@@ -4,7 +4,6 @@ const request = (url, method, body) => {
     headers: {
       'Content-Type': 'application/json'
     },
-    credentials: 'include',
     body: body && JSON.stringify(body)
   })
     .then(res => {

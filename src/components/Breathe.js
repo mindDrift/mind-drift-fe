@@ -16,7 +16,6 @@ const Breathe = ({ settings, handleEndSession }) => {
     if(time > endTime) {
       setEndSession(true);
       handleEndSession(time);
-      return;
     } 
 
     if(counter > durationArr[index]) {

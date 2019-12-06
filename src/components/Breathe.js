@@ -13,7 +13,7 @@ const Breathe = ({ inhale, exhale, holdIn, holdOut, endTime }) => {
   useEffect(() => {
     if(time > endTime) {
       setEndSession(true);
-      //return;
+      return;
     } 
 
     if(counter > durationArr[index]) {
@@ -33,8 +33,8 @@ const Breathe = ({ inhale, exhale, holdIn, holdOut, endTime }) => {
     <div>
       <p>{actionArr[index]}</p>
       <p>{counter}</p>
-      {endSession && <p>time up</p>}
-      <button>Done</button>
+      {!endSession && <button onClick={() => setEndSession(true)}>Close</button>}
+      {endSession && <p>Session complete ... how do you feel?</p>}
     </div>
   );
 };

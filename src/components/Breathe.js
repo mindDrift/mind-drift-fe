@@ -26,11 +26,9 @@ const Breathe = ({ settings, handleEndSession }) => {
 
     if(counter > durationArr[index]) {
       setCounter(0);
-      const nextIndex = durationArr[(index + 1) % 4] > 0 ? index + 1 : index + 2;
-      // const nextIndex = index + 1;
+      const nextIndex = durationArr[(index + 1) === 0] > 0 ? index + 2 : index + 1;
+ 
       setIndex(nextIndex % 4);
-      console.log(actionArr[index], nextIndex, 'index', index);
-      console.log(durationArr);
       if(actionArr[nextIndex % 4] !== 'hold') {
         toggle(!state);
       }
@@ -47,9 +45,9 @@ const Breathe = ({ settings, handleEndSession }) => {
   return (
     <div className={styles.Breathe}>
       <animated.div style={ {
-        opacity: x.interpolate({ range: [0, .7, 1], output: [0, .3, 1] }),
+        opacity: x.interpolate({ range: [0, 1], output: [.3, .7] }),
         transform: x
-          .interpolate({ range: [0, .1, 1], output: [1, 2, 4] })
+          .interpolate({ range: [0, 1], output: [2, 4] })
           .interpolate(x => `scale(${x})`),
       } } className={styles.Animate}>
       </animated.div>

@@ -25,7 +25,7 @@ const PrivateRoute = ({ component: Component, path, ...rest }) => {
 };
 
 PrivateRoute.propTypes = {
-  component: PropTypes.node,
+  component: PropTypes.func,
   path: PropTypes.string
 };
 

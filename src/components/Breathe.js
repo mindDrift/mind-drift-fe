@@ -15,7 +15,8 @@ const Breathe = ({ settings, handleEndSession }) => {
   const durationArr = [inhale, holdIn, exhale, holdOut];
   const actionArr = ['inhale', 'hold', 'exhale', 'hold'];
 
-  const { x } = useSpring({ from: { x: 0 }, x: state ? 1 : 0, config: { duration: (counter * 1000) } });
+
+  const { x } = useSpring({ from: { x: 0 }, x: state ? 1 : 0, config: { duration: (durationArr[index] * 1000) } });
 
   useEffect(() => {
     if(time > endTime) {
@@ -27,9 +28,14 @@ const Breathe = ({ settings, handleEndSession }) => {
     
     if(counter > durationArr[index]) {
       setCounter(0);
-      const nextIndex = durationArr[index + 1] > 0 ? index + 1 : index + 2;
+      const nextIndex = durationArr[(index + 1) % 4] > 0 ? index + 1 : index + 2;
+      // const nextIndex = index + 1;
       setIndex(nextIndex % 4);
-      useSpring({ from: { x: 0 }, x: state ? 1 : 0, config: { duration: (counter * 1000) } });
+      console.log(actionArr[index], nextIndex, 'index', index);
+      console.log(durationArr);
+      if(actionArr[nextIndex % 4] !== 'hold') {
+        toggle(!state);
+      }
       return;
     }
 
@@ -41,7 +47,7 @@ const Breathe = ({ settings, handleEndSession }) => {
   }, [counter]);
 
   return (
-    <div className={styles.Breathe} onClick={() => toggle(!state) }>
+    <div className={styles.Breathe}>
       <animated.div style={ {
         opacity: x.interpolate({ range: [0, .7, 1], output: [0, .3, 1] }),
         transform: x

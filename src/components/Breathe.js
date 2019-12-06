@@ -26,11 +26,11 @@ const Breathe = ({ settings, handleEndSession }) => {
       return;
     }
 
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       setCounter(counter + 1);
       setTime(time + 1);
-    
     }, 1000);
+    return () => clearTimeout(timeout);
   }, [counter]);
 
   return (

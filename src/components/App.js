@@ -22,9 +22,10 @@ const App = () => {
           <NavBar />
         </header>
         <Switch>
-          <Route exact path='/' />
-          <PrivateRoute path='/profile' component={Profile} />
-          <PrivateRoute path='/home' component={Home} />
+          <Route exact path='/' component={Home} />
+          <Route path='/breathe'>
+            <Breathe inhale={3} exhale={4} holdIn={2} holdOut={0} endTime={12} />
+          </Route>
         </Switch>
       </Router>
     </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import { useAuth0 } from '../react-auth0-spa';
 import PrivateRoute from './PrivateRoute';
 import NavBar from './NavBar';
@@ -14,9 +14,10 @@ const App = () => {
     return <div>loading ...</div>;
   }
 
+
   return (
     <div>
-      <Router>
+      <Router >
         <header>
           <NavBar />
         </header>

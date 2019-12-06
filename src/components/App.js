@@ -7,7 +7,7 @@ const App = () => {
 
   return (
     <div>
-      <Router history={history}>
+      <Router>
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/breathe'>

@@ -3,11 +3,11 @@ import { useAuth0 } from '../react-auth0-spa';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-  const { loading } = useAuth0();
+  // const { loading } = useAuth0();
 
-  if(loading) {
-    return <div>Loading...</div>;
-  }
+  // if(loading) {
+  //   return <div>Loading...</div>;
+  // }
 
   return (
     <>

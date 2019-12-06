@@ -5,10 +5,10 @@ import PrivateRoute from './PrivateRoute';
 import NavBar from './NavBar';
 import Home from './Home';
 import Profile from './Profile';
-import Breathe from './Breathe';
+import Session from '../containers/Session';
 
 const App = () => {
-  const { loading, user } = useAuth0();
+  const { loading } = useAuth0();
 
   if(loading) {
     return <div>loading ...</div>;
@@ -23,8 +23,7 @@ const App = () => {
         <Switch>
           <PrivateRoute exact path='/' component={Home} />
           <PrivateRoute path='/profile' component={Profile} />
-          <PrivateRoute path='/breathe'>
-            <Breathe inhale={3} exhale={4} holdIn={2} holdOut={0} endTime={12} userId={user && user.sub || ''} />
+          <PrivateRoute path='/breathe' component={Session}>
           </PrivateRoute>
         </Switch>
       </Router>

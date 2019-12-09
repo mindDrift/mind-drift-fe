@@ -1,0 +1,4 @@
+
+export const GET_SETTINGS = 'GET_SETTINGS';
+export const GET_LAST_USER_SESSION = 'GET_LAST_USER_SESSION';
+export const SET_SETTINGS = 'SET_SETTINGS';

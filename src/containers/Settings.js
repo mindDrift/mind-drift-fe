@@ -25,9 +25,7 @@ const Settings = () => {
       </header>
       { loading && <h2>Loading ... </h2> }
       { !loading && 
-        <ul>
-          <SettingsCards settingsList={settingsList} />
-        </ul>
+        <SettingsCards settingsList={settingsList} />
       }
     </>
   );

@@ -5,6 +5,7 @@ import PrivateRoute from './PrivateRoute';
 import Home from './Home';
 import Profile from './Profile';
 import Session from '../containers/Session';
+import Settings from '../containers/Settings';
 
 const App = () => {
   const { loading } = useAuth0();
@@ -20,6 +21,7 @@ const App = () => {
           <PrivateRoute exact path='/' component={Home} />
           <PrivateRoute path='/profile' component={Profile} />
           <PrivateRoute path='/breathe' component={Session} />
+          <PrivateRoute path='/settings' component={Settings} />
         </Switch>
       </Router>
     </div>

@@ -14,6 +14,7 @@ const NavBar = () => {
       {isAuthenticated && (
         <span>
           <Link to="/">Home</Link>&nbsp;
+          <Link to="/settings">Settings</Link>
           <Link to="/profile">Profile</Link>
         </span>
       )}  

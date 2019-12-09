@@ -13,7 +13,7 @@ const NavBar = () => {
       )}
       {isAuthenticated && <button onClick={() => logout()}>Log Out</button>}
       {isAuthenticated && (
-        <span>
+        <span className={styles.NavigationFooter}>
           <Link to="/">Home</Link>&nbsp;
           <Link to="/settings">Settings</Link>
           <Link to="/profile">Profile</Link>

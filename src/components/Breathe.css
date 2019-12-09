@@ -1,12 +1,37 @@
 @import './vars.css';
 
 .Breathe {
-
-  border: 3px var(--light-green) solid;
-  
-  background-color: var(--light-grey);
-
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 28vh;
+
+  p {
+    font-family: damion;
+    font-size: 26px;
+    color: var(--light-grey);
+    margin-bottom: 2em;
+  }
+
+  button {
+    border: solid var(--light-blue) 2px;
+    border-radius: 8px;
+    width: 8em;
+    height: 2.3em;
+    background-color: white;
+    font-family: Montserrat;
+    font-weight: 200;
+    font-size: 12px;
+    margin-top: 15em;
+  }
+  button:hover {
+    background-color: var(--light-blue);
+    border: none;
+    color: white;
+  }
 }
 
 .Animate {
@@ -15,7 +40,4 @@
   background-color: var(--rust);
   border-radius: 50%;
   display: inline-block;
-
-  margin-top: 3em;
-  margin-bottom: 1em;
 }

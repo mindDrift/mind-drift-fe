@@ -1,0 +1,29 @@
+.Home {
+ a {
+   text-align: center;
+ }
+}
+
+.breatheContainer {
+  text-align: center;
+
+  button:hover {
+    border: none;
+    background-color: var(--light-blue);
+    color: white;
+  }
+}
+
+.breatheButton {
+  border: solid var(--light-blue) 4px;
+  border-radius: 15px;
+  background-color: white;
+  width: 15em;
+  height: 3em;
+  color: black;
+  font-family: Montserrat;
+  font-weight: 200;
+  font-size: 14px;
+  margin-top: 35vh;
+}
+

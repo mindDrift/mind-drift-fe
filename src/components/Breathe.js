@@ -44,6 +44,7 @@ const Breathe = ({ settings, handleEndSession }) => {
 
   return (
     <div className={styles.Breathe}>
+      <p>{actionArr[index]}</p>
       <animated.div style={ {
         opacity: x.interpolate({ range: [0, 1], output: [.3, .7] }),
         transform: x
@@ -52,8 +53,7 @@ const Breathe = ({ settings, handleEndSession }) => {
       } } className={styles.Animate}>
       </animated.div>
 
-      <p>{actionArr[index]}</p>
-      <p>{counter}</p>
+      {/* <p>{counter}</p> */}
       {!endSession && <button onClick={() => handleEndSession(time)}>Close</button>}
     </div>
   );

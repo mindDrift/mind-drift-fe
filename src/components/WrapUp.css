@@ -1,0 +1,24 @@
+.WrapUp {
+  text-align: center;
+  p {
+    font-family: Montserrat;
+    font-weight: 200;
+    font-size: 12px;
+  }
+  button {
+    border-radius: 6px;
+    color: white;
+    border: none;
+    width: 8em;
+    height: 2em;
+    background-color: var(--light-grey);
+    font-family: Montserrat;
+    font-weight: 200;
+    font-size: 10px;
+  }
+  button:hover {
+    background-color: var(--light-blue);
+    border: none;
+    color: white;
+  }
+}

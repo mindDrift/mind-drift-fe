@@ -1,0 +1,23 @@
+.ProfileArea {
+  margin: 2em;
+  overflow: auto; 
+  height: 100%; 
+
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  h2 {
+    font-family: Montserrat;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-family: Montserrat;
+    font-weight: 200;
+  }
+}

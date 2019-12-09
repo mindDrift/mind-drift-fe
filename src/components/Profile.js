@@ -16,8 +16,8 @@ const Profile = () => {
       <section className={styles.ProfileArea}>
         <img src={user.picture} alt="Profile" />
         <h2>Your Profile:</h2>
-        <p>Username: {user.name}</p>
-        <p>Email: {user.email}</p>
+        <h3>Username:</h3><p> {user.name}</p>
+        <h3>Email:</h3><p> {user.email}</p>
         {/* <code>{JSON.stringify(user, null, 2)}</code> */}
       </section>
     </>

@@ -52,8 +52,6 @@ const Breathe = ({ settings, handleEndSession }) => {
           .interpolate(x => `scale(${x})`),
       } } className={styles.Animate}>
       </animated.div>
-
-      {/* <p>{counter}</p> */}
       {!endSession && <button onClick={() => handleEndSession(time)}>Close</button>}
     </div>
   );

@@ -8,14 +8,12 @@
   align-items: center;
   height: 100%;
   margin-top: 28vh;
-
   p {
     font-family: damion;
     font-size: 26px;
     color: var(--light-grey);
     margin-bottom: 2em;
   }
-
   button {
     border: solid var(--light-blue) 2px;
     border-radius: 8px;

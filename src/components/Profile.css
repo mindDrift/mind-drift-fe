@@ -8,16 +8,28 @@
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
+    margin-bottom: 2em;
   }
 
   h2 {
     font-family: Montserrat;
     font-weight: 700;
     text-transform: uppercase;
+    margin-bottom: 1em;
+    color: var(--rust);
   }
-
+  h3 {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--rust);
+  }
   p {
     font-family: Montserrat;
     font-weight: 200;
+    line-height: normal;
+    font-size: 14px;
+    margin-bottom: 0.5em;
   }
 }

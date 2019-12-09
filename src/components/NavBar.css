@@ -1,25 +1,5 @@
 .NavBar {
   margin-top: 2em;
-  span {
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    align-items: center;
-    background-color: var(--light-grey);
-    width: 100vw;
-    left: 0;
-  }
-  a {
-    text-decoration: none;
-    color: white;
-    font-family: Montserrat;
-    margin: 1em;
-    font-weight: 200;
-    font-size: 14px;
-  }
-  a:hover {
-    font-weight: 400;
-  }
   button {
     border: solid var(--light-blue) 2px;
     border-radius: 8px;
@@ -36,5 +16,26 @@
     background-color: var(--light-blue);
     border: none;
     color: white;
+    cursor: pointer;
+  }
+}
+
+.NavigationFooter {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  background-color: var(--light-grey);
+  width: 100vw;
+  left: 0;
+  a {
+    text-decoration: none;
+    color: white;
+    font-family: Montserrat;
+    margin: 1em;
+    font-weight: 200;
+    font-size: 14px;
+  }
+  a:hover {
+    font-weight: 400;
   }
 }

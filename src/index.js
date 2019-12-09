@@ -7,6 +7,7 @@ import config from './auth_config.json';
 import history from './utils/history';
 import { Provider } from 'react-redux';
 import store from './store';
+import './reset.css';
 
 const onRedirectCallback = appState => {
   history.push(

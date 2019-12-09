@@ -1,0 +1,54 @@
+.SettingsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin-top: 2em;
+
+  h2 {
+    font-family: Montserrat;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: var(--dark-blue);
+    margin-bottom: 2em;
+    margin-top: 1em;
+  }
+}
+
+.items {
+  list-style: none;
+  padding-left: 0;
+  border: solid 2px var(--light-green);
+  border-radius: 10px;
+  margin: 1em;
+  padding: 1em;
+  line-height: normal;
+
+  h3 {
+    font-family: Montserrat;
+    font-weight: 200;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 0.25em;
+  }
+  p {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--dark-blue);
+    line-height: normal;
+  }
+
+  li {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--dark-blue);
+    line-height: normal;
+  }
+  ul {
+    margin-top: 0.5em;
+    margin-bottom:0.5em;
+  }
+}

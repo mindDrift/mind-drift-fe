@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './SettingsCards.css';
 
 const SettingsCards = ({ settingsList }) => {
   const settingsElements = settingsList.map(({ 
@@ -13,13 +14,16 @@ const SettingsCards = ({ settingsList }) => {
     endTime
   }) => {
     return (
-      <li key={_id}>title = {title}
+      <li 
+        className={styles.items}
+        key={_id}>
+        <h3>{title}</h3>
         <p>{description}</p>
         <ul>
-          <li>inhale: {inhale}</li>
+          <li>Inhale: {inhale}</li>
           {holdIn > 0 && <li>hold: {holdIn}</li>}
-          <li>exhale: {exhale}</li>
-          {holdOut > 0 && <li>hold: {holdOut}</li>}
+          <li>Exhale: {exhale}</li>
+          {holdOut > 0 && <li>Hold: {holdOut}</li>}
         </ul>
         <p>Continue for {endTime} seconds</p>
       </li>
@@ -27,11 +31,12 @@ const SettingsCards = ({ settingsList }) => {
   });
 
   return (
-    <>
-      <ul>
+    <section className={styles.SettingsList}>
+      <h2>Pick Your Breathing Method:</h2>
+      <ul className={styles.list}>
         {settingsElements}
       </ul>
-    </>
+    </section>
   );
 };
 

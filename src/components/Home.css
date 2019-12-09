@@ -11,6 +11,7 @@
     border: none;
     background-color: var(--light-blue);
     color: white;
+    cursor: pointer;
   }
 }
 

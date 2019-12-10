@@ -48,13 +48,32 @@ const Breathe = ({ handleEndSession }) => {
   return (
     <div className={styles.Breathe}>
       <p>{actionArr[index]}</p>
-      <animated.div style={ {
+      {/* <animated.div style={ {
         opacity: x.interpolate({ range: [0, .2, .3, .6, .8, 1], output: [.3, .45, .4, .6, .74, .7] }),
         transform: x
           .interpolate({ range: [0, .4, 1], output: [2, 3, 4] })
-          .interpolate(x => `translateY(-${x - .6}em) scale(${x}) scaleX(${x / 2.5})`)
+          .interpolate(x => `translateY(-${x - .6}em) scale(${x})`) //stretch up
+          //.interpolate(x => `translateY(-${x - .6}em) scale(${x}) scaleX(${x / 2.5})`) //squish and stretch
       } } className={styles.Animate}>
+      </animated.div> */}
+      <animated.div className={styles.flowerContainer} style={{
+        transform: x
+          .interpolate({ range: [0, 1], output: [1, 1.4] })
+          .interpolate(x => `translateY(-${x}em) scale(${x})`) //stretch up
+      }}>
+        <animated.div className={styles.midPetal}></animated.div>
+        <animated.div className={styles.leftPetal} style={{
+          transform: x
+            // .interpolate({ range: [0, 1], output: [0, -10] })
+            // .interpolate(x => `rotate(${x}deg)`)
+        }} ></animated.div>
+        <animated.div className={styles.rightPetal} style={{
+          transform: x
+            // .interpolate({ range: [0, 1], output: [0, 10] })
+            // .interpolate(x => `rotate(-${x}deg)`)
+        }}></animated.div>
       </animated.div>
+
       {!endSession && <button onClick={() => handleEndSession(time)}>Close</button>}
     </div>
   );

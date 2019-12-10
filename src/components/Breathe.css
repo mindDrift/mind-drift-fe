@@ -41,3 +41,45 @@
   border-radius: 50%;
   display: inline-block;
 }
+.midPetal {
+  position: relative;
+  left: 0;
+  
+  width: 5em;
+  height: 5em;
+  background-color: var(--light-blue);
+  border-radius: 1em 20em;
+  
+  opacity: .5;
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+}
+.leftPetal {
+  position: relative;
+  left: 0em;
+  top: -5em;
+  width: 5em;
+  height: 5em;
+  background-color: var(--light-blue);
+  border-radius: 1em 20em;
+  
+  opacity: .5;
+  transform: rotate(55deg);
+  transform-origin: bottom right;
+}
+.rightPetal {
+  position: relative;
+  left: 0em;
+  width: 5em;
+  top: -10em;
+  height: 5em;
+  background-color: var(--light-blue);
+  border-radius: 1em 20em;
+  
+  opacity: .5;
+  transform: rotate(35deg);
+  transform-origin: bottom right;
+}
+.flowerContainer {
+  margin-top: 3em;
+}

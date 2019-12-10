@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './SettingsCards.css';
 
-const SettingsCards = ({ settingsList }) => {
+const SettingsCards = ({ settingsList, handleSelectSettings, handleEdit, handleBreatheNow }) => {
   const settingsElements = settingsList.map(({ 
     title, 
     _id, 
@@ -16,7 +16,9 @@ const SettingsCards = ({ settingsList }) => {
     return (
       <li 
         className={styles.items}
-        key={_id}>
+        key={_id}
+        onClick={() => handleSelectSettings(_id)}>
+        <button onClick={() => handleEdit(_id)}>edit</button>
         <h3>{title}</h3>
         <p>{description}</p>
         <ul>
@@ -26,6 +28,7 @@ const SettingsCards = ({ settingsList }) => {
           {holdOut > 0 && <li>Hold: {holdOut}</li>}
         </ul>
         <p>Continue for {endTime} seconds</p>
+        <button onClick={handleBreatheNow}>Breathe now</button>
       </li>
     );
   });
@@ -35,6 +38,7 @@ const SettingsCards = ({ settingsList }) => {
       <h2>Pick Your Breathing Method:</h2>
       <ul className={styles.list}>
         {settingsElements}
+        <li className={styles.items}>+</li>
       </ul>
     </section>
   );
@@ -51,6 +55,9 @@ SettingsCards.propTypes = {
       endTime: PropTypes.number.isRequired,
     }).isRequired,
   ).isRequired,
+  handleSelectSettings: PropTypes.func.isRequired,
+  handleBreatheNow: PropTypes.func.isRequired,
+  handleEdit: PropTypes.func.isRequired,
 };
 
 export default SettingsCards;

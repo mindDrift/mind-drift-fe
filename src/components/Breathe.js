@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { useSpring, animated } from 'react-spring';
 import styles from './Breathe.css';
+import { getCurrentSettings } from '../selectors/settingsSelectors';
 
-const Breathe = ({ settings, handleEndSession }) => {
-  const { inhale, holdIn, exhale, holdOut, endTime } = settings;
+const Breathe = ({ handleEndSession }) => {
+  const { inhale, holdIn, exhale, holdOut, endTime } = useSelector(state => getCurrentSettings(state));
 
   const [counter, setCounter] = useState(0);
   const [time, setTime] = useState(0);
@@ -22,11 +24,12 @@ const Breathe = ({ settings, handleEndSession }) => {
     if(time > endTime) {
       setEndSession(true);
       handleEndSession(time);
+      return;
     } 
 
     if(counter > durationArr[index]) {
       setCounter(0);
-      const nextIndex = durationArr[(index + 1) === 0] > 0 ? index + 2 : index + 1;
+      const nextIndex = durationArr[index + 1] === 0 ? index + 2 : index + 1;
  
       setIndex(nextIndex % 4);
       if(actionArr[nextIndex % 4] !== 'hold') {
@@ -36,11 +39,11 @@ const Breathe = ({ settings, handleEndSession }) => {
     }
 
     const timeout = setTimeout(() => {
-      setCounter(counter + 1);
       setTime(time + 1);
+      setCounter(counter + 1);
     }, 1000);
     return () => clearTimeout(timeout);
-  }, [counter]);
+  }, [counter, time]);
 
   return (
     <div className={styles.Breathe}>

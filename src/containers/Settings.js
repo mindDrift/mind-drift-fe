@@ -1,30 +1,57 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchSettingsPromise } from '../actions/settingsActions';
-import { getSettings } from '../selectors/settingsSelectors';
+import { useAuth0 } from '../react-auth0-spa';
+import { fetchSettingsPromise, setCurrentSettings } from '../actions/settingsActions';
+import { getSettings, getSettingsLoading } from '../selectors/settingsSelectors';
 import NavBar from '../components/NavBar';
 import SettingsCards from '../components/SettingsCards';
+import PropTypes from 'prop-types';
 
-const Settings = () => {
+const Settings = ({ history }) => {
+  const { user } = useAuth0();
 
   const settingsList = useSelector(state => getSettings(state));
+  const loading = useSelector(state => getSettingsLoading(state));
 
   const dispatch = useDispatch();
-  const updateSettings = () => dispatch(fetchSettingsPromise());
+  const updateSettings = () => dispatch(fetchSettingsPromise(user.sub));
   useEffect(() => {
     updateSettings();
   }, []);
+
+  const handleSelectSettings = id => {
+    const settings = settingsList.find(({ _id }) => _id === id);
+    dispatch(setCurrentSettings(settings));
+  };
+  const handleBreatheNow = () => {
+    history.push('/breathe');
+  };
+  const handleEdit = id => {
+    console.log('handle edit of', id);
+  };
 
   return (
     <>
       <header>
         <NavBar />
       </header>
-      <ul>
-        <SettingsCards settingsList={settingsList} />
-      </ul>
+      { loading && <h2>Loading ... </h2> }
+      { !loading && 
+        <SettingsCards 
+          settingsList={settingsList} 
+          handleSelectSettings={handleSelectSettings}
+          handleBreatheNow={handleBreatheNow} 
+          handleEdit={handleEdit}
+        />
+      }
     </>
   );
+};
+
+Settings.propTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired
+  })
 };
 
 export default Settings;

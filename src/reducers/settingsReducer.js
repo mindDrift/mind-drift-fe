@@ -8,6 +8,7 @@ const initialState = {
   settingsList: [],
   loading: true,
   currentSettings: {
+    userId: '__default__',
     title: 'Box Breathing',
     inhale: 5,
     holdIn: 4,

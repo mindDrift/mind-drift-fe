@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useAuth0 } from '../react-auth0-spa';
 import { fetchSettingsPromise, setCurrentSettings } from '../actions/settingsActions';
@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 
 const Settings = ({ history }) => {
   const { user } = useAuth0();
+  const [selectedId, setSelectedId] = useState('');
 
   const settingsList = useSelector(state => getSettings(state));
   const loading = useSelector(state => getSettingsLoading(state));
@@ -22,6 +23,7 @@ const Settings = ({ history }) => {
   const handleSelectSettings = id => {
     const settings = settingsList.find(({ _id }) => _id === id);
     dispatch(setCurrentSettings(settings));
+    setSelectedId(id);
   };
   const handleBreatheNow = () => {
     history.push('/breathe');
@@ -42,6 +44,7 @@ const Settings = ({ history }) => {
           handleSelectSettings={handleSelectSettings}
           handleBreatheNow={handleBreatheNow} 
           handleEdit={handleEdit}
+          selectedId={selectedId}
         />
       }
     </>

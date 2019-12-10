@@ -23,6 +23,7 @@
 .NavigationFooter {
   display: flex;
   position: fixed;
+  z-index: 5;
   bottom: 0;
   background-color: var(--light-grey);
   width: 100vw;

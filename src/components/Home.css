@@ -6,6 +6,7 @@
 
 .breatheContainer {
   text-align: center;
+  margin-top: 35vh;
 
   button:hover {
     border: none;
@@ -21,10 +22,10 @@
   background-color: white;
   width: 15em;
   height: 3em;
+  margin-top: 2em;
   color: black;
   font-family: Montserrat;
   font-weight: 200;
   font-size: 14px;
-  margin-top: 35vh;
 }
 

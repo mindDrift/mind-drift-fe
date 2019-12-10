@@ -43,7 +43,7 @@ const Breathe = ({ handleEndSession }) => {
       setCounter(counter + 1);
     }, 1000);
     return () => clearTimeout(timeout);
-  }, [counter]);
+  }, [counter, time]);
 
   return (
     <div className={styles.Breathe}>

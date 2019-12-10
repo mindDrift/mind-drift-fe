@@ -12,3 +12,9 @@ export const [
 
 export const GET_LAST_USER_SESSION = 'GET_LAST_USER_SESSION';
 export const SET_SETTINGS = 'SET_SETTINGS';
+export const SET_CURRENT_SETTINGS = 'SET_CURRENT_SETTINGS';
+
+export const setCurrentSettings = payload => ({
+  type: SET_CURRENT_SETTINGS,
+  payload: payload
+});

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './SettingsCards.css';
 
-const SettingsCards = ({ settingsList }) => {
+const SettingsCards = ({ settingsList, handleBreatheWithSettings }) => {
   const settingsElements = settingsList.map(({ 
     title, 
     _id, 
@@ -16,7 +16,8 @@ const SettingsCards = ({ settingsList }) => {
     return (
       <li 
         className={styles.items}
-        key={_id}>
+        key={_id}
+        onClick={() => handleBreatheWithSettings(_id)}>
         <h3>{title}</h3>
         <p>{description}</p>
         <ul>
@@ -52,6 +53,7 @@ SettingsCards.propTypes = {
       endTime: PropTypes.number.isRequired,
     }).isRequired,
   ).isRequired,
+  handleBreatheWithSettings: PropTypes.func.isRequired
 };
 
 export default SettingsCards;

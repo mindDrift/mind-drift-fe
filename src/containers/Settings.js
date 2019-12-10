@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useAuth0 } from '../react-auth0-spa';
-import { fetchSettingsPromise } from '../actions/settingsActions';
+import { fetchSettingsPromise, setCurrentSettings } from '../actions/settingsActions';
 import { getSettings, getSettingsLoading } from '../selectors/settingsSelectors';
 import NavBar from '../components/NavBar';
 import SettingsCards from '../components/SettingsCards';
@@ -18,6 +18,11 @@ const Settings = () => {
     updateSettings();
   }, []);
 
+  const handleBreatheWithSettings = id => {
+    const settings = settingsList.find(({ _id }) => _id === id);
+    dispatch(setCurrentSettings(settings));
+  };
+
   return (
     <>
       <header>
@@ -25,7 +30,7 @@ const Settings = () => {
       </header>
       { loading && <h2>Loading ... </h2> }
       { !loading && 
-        <SettingsCards settingsList={settingsList} />
+        <SettingsCards settingsList={settingsList} handleBreatheWithSettings={handleBreatheWithSettings} />
       }
     </>
   );

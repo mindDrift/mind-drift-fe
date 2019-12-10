@@ -1,7 +1,12 @@
 import SettingsForm from '../components/SettingsForm';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { useAuth0 } from '../react-auth0-spa';
+import { postSettings } from '../services/setting';
+import PropTypes from 'prop-types';
 
-const EditSettings = () => {
+const EditSettings = ({ history }) => {
+  const { user } = useAuth0();
+
   const initialSettings = {
     title: 'Box Breathing',
     description: 'HELLO',
@@ -16,7 +21,12 @@ const EditSettings = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    console.log('event firing!');
+    userSettings.userId = user.sub;
+    postSettings(userSettings)
+      .then(settings => {
+        console.log('would be nice to use Redux to set the active selection in settings page to', settings._id);
+        history.push('/settings');
+      });
   };
 
   const handleChange = ({ target }) => {
@@ -30,6 +40,12 @@ const EditSettings = () => {
   return (
     <SettingsForm handleChange={handleChange} handleSubmit={handleSubmit} settings={userSettings} />
   );
+};
+
+EditSettings.propTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired
+  })
 };
 
 export default EditSettings;

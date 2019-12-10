@@ -8,26 +8,14 @@ import { getCurrentSettings } from '../selectors/settingsSelectors';
 
 const EditSettings = ({ history }) => {
   const { user } = useAuth0();
-  const initialSettings = {
-    title: 'New Breathing Pattern',
-    description: 'Your description here...',
-    inhale: 0,
-    holdIn: 0,
-    exhale: 0,
-    holdOut: 0,
-    endTime: 0
-  };
-
   const currentSettings = useSelector(state => getCurrentSettings(state));
   const [userSettings, setUserSettings] = useState(currentSettings);
-
 
   const handleSubmit = event => {
     event.preventDefault();
     userSettings.userId = user.sub;
     postSettings(userSettings)
       .then(settings => {
-        console.log('would be nice to use Redux to set the active selection in settings page to', settings._id);
         history.push('/settings');
       });
   };

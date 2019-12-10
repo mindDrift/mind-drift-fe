@@ -11,7 +11,7 @@ const initialState = {
   loading: true,
   currentSettings: {
     userId: '__default__',
-    title: 'Box Breathing',
+    title: '',
     description: '',
     inhale: 5,
     holdIn: 4,

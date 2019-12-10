@@ -69,14 +69,12 @@
     font-weight: 200;
     font-size: 14px;
   }
-}
 
-.selected {
-  /*rgb (191, 191, 191) is equivalent to var(--light-grey)*/
-  box-shadow: 
-    0 0 0 1px rgba(var(--light-grey-rgb), .4),
-    0 0 0 2px rgba(var(--light-grey-rgb), .3),
-    0 0 0 3px rgba(var(--light-grey-rgb), 0.2),
-    0 0 0 5px rgba(var(--light-grey-rgb), .1),
-    0 0 0 7px rgba(var(--light-grey-rgb), .1);
+  &.selected {
+    box-shadow: 
+      0 0 1px  3px rgba(var(--light-grey-rgb), 0.3),
+      0 0 2px  6px rgba(var(--light-grey-rgb), 0.2),
+      0 0 3px  8px rgba(var(--light-grey-rgb), 0.1),
+      0 0 4px 10px rgba(var(--light-grey-rgb), 0.1);
+  }
 }

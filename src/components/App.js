@@ -6,6 +6,7 @@ import Home from './Home';
 import Profile from './Profile';
 import Session from '../containers/Session';
 import Settings from '../containers/Settings';
+import styles from './App.css';
 
 const App = () => {
   const { loading } = useAuth0();
@@ -15,7 +16,7 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <Router >
         <Switch>
           <PrivateRoute exact path='/' component={Home} />

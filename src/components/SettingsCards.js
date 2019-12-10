@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './SettingsCards.css';
 
-const SettingsCards = ({ settingsList, handleSelectSettings, handleEdit, handleBreatheNow }) => {
+const SettingsCards = ({ settingsList, handleSelectSettings, handleEdit, handleBreatheNow, selectedId }) => {
   const settingsElements = settingsList.map(({ 
-    title, 
     _id, 
+    userId,
+    title, 
     description, 
     inhale, 
     holdIn, 
@@ -13,12 +14,14 @@ const SettingsCards = ({ settingsList, handleSelectSettings, handleEdit, handleB
     holdOut, 
     endTime
   }) => {
+    const editable = !userId.includes('__default__');
+    const selected = selectedId === _id;
     return (
       <li 
-        className={styles.items}
+        className={`${styles.items} ${selected && styles.selected || ''}`}
         key={_id}
         onClick={() => handleSelectSettings(_id)}>
-        <button onClick={() => handleEdit(_id)}>edit</button>
+        {editable && <button onClick={() => handleEdit(_id)}>edit</button>}
         <h3>{title}</h3>
         <p>{description}</p>
         <ul>
@@ -28,7 +31,7 @@ const SettingsCards = ({ settingsList, handleSelectSettings, handleEdit, handleB
           {holdOut > 0 && <li>Hold: {holdOut}</li>}
         </ul>
         <p>Continue for {endTime} seconds</p>
-        <button onClick={handleBreatheNow}>Breathe now</button>
+        {selected && <button onClick={handleBreatheNow}>Breathe now</button>}
       </li>
     );
   });
@@ -48,6 +51,7 @@ SettingsCards.propTypes = {
   settingsList: PropTypes.arrayOf(
     PropTypes.shape({
       _id: PropTypes.string.isRequired,
+      userId: PropTypes.string.isRequired,
       inhale: PropTypes.number.isRequired,
       exhale: PropTypes.number.isRequired,
       holdIn: PropTypes.number.isRequired,
@@ -58,6 +62,7 @@ SettingsCards.propTypes = {
   handleSelectSettings: PropTypes.func.isRequired,
   handleBreatheNow: PropTypes.func.isRequired,
   handleEdit: PropTypes.func.isRequired,
+  selectedId: PropTypes.string.isRequired,
 };
 
 export default SettingsCards;

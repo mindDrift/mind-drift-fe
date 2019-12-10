@@ -69,15 +69,14 @@
     font-weight: 200;
     font-size: 14px;
   }
-  
 }
 
 .selected {
   /*rgb (191, 191, 191) is equivalent to var(--light-grey)*/
   box-shadow: 
-    0 0 0 1px rgba(191, 191, 191, .4),
-    0 0 0 2px rgba(191, 191, 191, .3),
-    0 0 0 3px rgba(191, 191, 191, .2),
-    0 0 0 5px rgba(191, 191, 191, .1),
-    0 0 0 7px rgba(191, 191, 191, .1);
+    0 0 0 1px rgba(var(--light-grey-rgb), .4),
+    0 0 0 2px rgba(var(--light-grey-rgb), .3),
+    0 0 0 3px rgba(var(--light-grey-rgb), 0.2),
+    0 0 0 5px rgba(var(--light-grey-rgb), .1),
+    0 0 0 7px rgba(var(--light-grey-rgb), .1);
 }

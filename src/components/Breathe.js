@@ -24,6 +24,7 @@ const Breathe = ({ handleEndSession }) => {
     if(time > endTime) {
       setEndSession(true);
       handleEndSession(time);
+      return;
     } 
 
     if(counter > durationArr[index]) {
@@ -38,8 +39,8 @@ const Breathe = ({ handleEndSession }) => {
     }
 
     const timeout = setTimeout(() => {
-      setCounter(counter + 1);
       setTime(time + 1);
+      setCounter(counter + 1);
     }, 1000);
     return () => clearTimeout(timeout);
   }, [counter]);

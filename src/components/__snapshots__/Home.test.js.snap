@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component renders the Home component 1`] = `
+<section
+  className="Home"
+>
+  <header>
+    <NavBar />
+  </header>
+  <div
+    className="breatheContainer"
+  >
+    <div
+      className="logo"
+    >
+      logo needed here
+    </div>
+    <Link
+      to="/breathe"
+    >
+      <button
+        className="breatheButton"
+      >
+        Breathe
+      </button>
+    </Link>
+    <Link
+      to="/settings"
+    >
+      <button
+        className="breatheButton"
+      >
+        Setup
+      </button>
+    </Link>
+  </div>
+</section>
+`;

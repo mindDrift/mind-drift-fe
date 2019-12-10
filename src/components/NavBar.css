@@ -22,12 +22,13 @@
 
 .NavigationFooter {
   display: flex;
+  justify-content: center;
   position: fixed;
   z-index: 5;
   bottom: 0;
   background-color: var(--light-grey);
   width: 100vw;
-  left: 0;
+  max-width: 700px;
   a {
     text-decoration: none;
     color: white;

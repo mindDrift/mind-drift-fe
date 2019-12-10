@@ -32,3 +32,22 @@
     - Journaling
     - Using local storage during offline mode
     - Having offline access to the app for users who don't have a stored JWT
+
+    ## 12/9/2019
+    — Maeve tackled Auth0 with React Native, and ran into some hurdles that we will debate on crossing later in the week. 
+    — Auth0 Social keys need extra validation. 
+      — Abbey to work on Facebook key this evening.
+    — We are now able to select settings and breathe. 
+    — Going Forward:
+      1. Additional Styling: icons on Navbar, transitions on page change, settings form/plus sign, make sure size is responsive for tablet
+        * Fix log out button sliding to left on wide screens
+      2. Make edit button functional/Settings Form
+      3. Day/Night Mode
+      4. Animation
+      5. Code Review/Refactor
+    -What Went Well:
+      - Got the majority of the styling completed today. Mostly using vanilla CSS.
+      — Settings vertical slice completed! A lot of execution happened today, and a lot of redux!
+    — What Didn't Go So Well: 
+      — Because we worked independently, there are now some holes we have to go back and fill. 
+    — Could also go back and refactor some CSS. 

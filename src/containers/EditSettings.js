@@ -1,13 +1,15 @@
 import SettingsForm from '../components/SettingsForm';
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useAuth0 } from '../react-auth0-spa';
 import { postSettings } from '../services/setting';
 import PropTypes from 'prop-types';
 import { getCurrentSettings } from '../selectors/settingsSelectors';
+import { setCurrentSettings } from '../actions/settingsActions';
 
 const EditSettings = ({ history }) => {
   const { user } = useAuth0();
+  const dispatch = useDispatch();
   const currentSettings = useSelector(state => getCurrentSettings(state));
   const [userSettings, setUserSettings] = useState(currentSettings);
 
@@ -16,6 +18,7 @@ const EditSettings = ({ history }) => {
     userSettings.userId = user.sub;
     postSettings(userSettings)
       .then(settings => {
+        dispatch(setCurrentSettings(settings));
         history.push('/settings');
       });
   };

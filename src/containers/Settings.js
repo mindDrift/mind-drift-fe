@@ -5,8 +5,9 @@ import { fetchSettingsPromise, setCurrentSettings } from '../actions/settingsAct
 import { getSettings, getSettingsLoading } from '../selectors/settingsSelectors';
 import NavBar from '../components/NavBar';
 import SettingsCards from '../components/SettingsCards';
+import PropTypes from 'prop-types';
 
-const Settings = () => {
+const Settings = ({ history }) => {
   const { user } = useAuth0();
 
   const settingsList = useSelector(state => getSettings(state));
@@ -18,9 +19,15 @@ const Settings = () => {
     updateSettings();
   }, []);
 
-  const handleBreatheWithSettings = id => {
+  const handleSelectSettings = id => {
     const settings = settingsList.find(({ _id }) => _id === id);
     dispatch(setCurrentSettings(settings));
+  };
+  const handleBreatheNow = () => {
+    history.push('/breathe');
+  };
+  const handleEdit = id => {
+    console.log('handle edit of', id);
   };
 
   return (
@@ -30,10 +37,21 @@ const Settings = () => {
       </header>
       { loading && <h2>Loading ... </h2> }
       { !loading && 
-        <SettingsCards settingsList={settingsList} handleBreatheWithSettings={handleBreatheWithSettings} />
+        <SettingsCards 
+          settingsList={settingsList} 
+          handleSelectSettings={handleSelectSettings}
+          handleBreatheNow={handleBreatheNow} 
+          handleEdit={handleEdit}
+        />
       }
     </>
   );
+};
+
+Settings.propTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired
+  })
 };
 
 export default Settings;

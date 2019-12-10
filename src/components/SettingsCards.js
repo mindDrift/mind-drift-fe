@@ -41,8 +41,8 @@ const SettingsCards = ({ settingsList, handleSelectSettings, handleEdit, handleB
       <h2>Pick Your Breathing Method:</h2>
       <ul className={styles.list}>
         {settingsElements}
-        <li className={styles.items}>+</li>
       </ul>
+      <button onClick={handleEdit}>+</button>
     </section>
   );
 };

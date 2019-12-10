@@ -1,23 +1,26 @@
 import SettingsForm from '../components/SettingsForm';
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { useAuth0 } from '../react-auth0-spa';
 import { postSettings } from '../services/setting';
 import PropTypes from 'prop-types';
+import { getCurrentSettings } from '../selectors/settingsSelectors';
 
 const EditSettings = ({ history }) => {
   const { user } = useAuth0();
-
   const initialSettings = {
-    title: 'Box Breathing',
-    description: 'HELLO',
-    inhale: 5,
-    holdIn: 4,
-    exhale: 5, 
-    holdOut: 4,
-    endTime: 126
+    title: 'New Breathing Pattern',
+    description: 'Your description here...',
+    inhale: 0,
+    holdIn: 0,
+    exhale: 0,
+    holdOut: 0,
+    endTime: 0
   };
 
-  const [userSettings, setUserSettings] = useState(initialSettings);
+  const currentSettings = useSelector(state => getCurrentSettings(state));
+  const [userSettings, setUserSettings] = useState(currentSettings);
+
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -31,7 +34,7 @@ const EditSettings = ({ history }) => {
 
   const handleChange = ({ target }) => {
     let newValue = target.value;
-    if(target.name !== 'title' && target.name !== 'description') { 
+    if(target.name !== 'title' && target.name !== 'description') {
       newValue = Number(target.value);
     }
     setUserSettings({ ...userSettings, [target.name]: newValue });

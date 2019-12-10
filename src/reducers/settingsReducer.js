@@ -2,14 +2,17 @@ import {
   FETCH_SETTINGS,
   FETCH_SETTINGS_LOADING,
   FETCH_SETTINGS_DONE,
-  SET_CURRENT_SETTINGS
+  SET_CURRENT_SETTINGS,
+  SET_SELECTED_SETTINGS_ID
 } from '../actions/settingsActions';
 const initialState = {
   settingsList: [],
+  selectedSettingsId: '',
   loading: true,
   currentSettings: {
     userId: '__default__',
     title: 'Box Breathing',
+    description: '',
     inhale: 5,
     holdIn: 4,
     exhale: 5,
@@ -28,6 +31,8 @@ export default function reducer(state = initialState, action) {
       return { ...state, settingsList: action.payload };
     case SET_CURRENT_SETTINGS:
       return { ...state, currentSettings: action.payload };
+    case SET_SELECTED_SETTINGS_ID:
+      return { ...state, selectedSettingsId: action.payload };
     default: return state;
   }
 }

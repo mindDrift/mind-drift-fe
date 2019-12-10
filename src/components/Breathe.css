@@ -42,44 +42,41 @@
   display: inline-block;
 }
 .midPetal {
-  position: relative;
-  left: 0;
+  position: absolute;
   
   width: 5em;
   height: 5em;
-  background-color: var(--light-blue);
+  background-color: var(--dark-blue);
   border-radius: 1em 20em;
   
   opacity: .5;
   transform: rotate(45deg);
   transform-origin: bottom right;
+  right: 50%;
 }
 .leftPetal {
-  position: relative;
-  left: 0em;
-  top: -5em;
+  position: absolute;
+ 
   width: 5em;
   height: 5em;
-  background-color: var(--light-blue);
+  background-color: var(--dark-blue);
   border-radius: 1em 20em;
   
   opacity: .5;
-  transform: rotate(55deg);
-  transform-origin: bottom right;
+  right: 50%;
 }
 .rightPetal {
-  position: relative;
-  left: 0em;
+  position: absolute;
+  
   width: 5em;
-  top: -10em;
   height: 5em;
-  background-color: var(--light-blue);
+  background-color: var(--dark-blue);
   border-radius: 1em 20em;
   
   opacity: .5;
-  transform: rotate(35deg);
-  transform-origin: bottom right;
+  right: 50%;
 }
 .flowerContainer {
   margin-top: 3em;
+  width: 0;
 }

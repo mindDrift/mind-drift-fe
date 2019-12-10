@@ -30,6 +30,7 @@ const Settings = ({ history }) => {
   };
   const handleEdit = id => {
     console.log('handle edit of', id);
+    history.push('/edit-settings');
   };
 
   return (

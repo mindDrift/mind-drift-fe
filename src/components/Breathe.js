@@ -28,7 +28,7 @@ const Breathe = ({ handleEndSession }) => {
 
     if(counter > durationArr[index]) {
       setCounter(0);
-      const nextIndex = durationArr[(index + 1) === 0] > 0 ? index + 2 : index + 1;
+      const nextIndex = durationArr[index + 1] === 0 ? index + 2 : index + 1;
  
       setIndex(nextIndex % 4);
       if(actionArr[nextIndex % 4] !== 'hold') {
@@ -58,10 +58,6 @@ const Breathe = ({ handleEndSession }) => {
     </div>
   );
 };
-
-const mapStateToProps = state => ({
-  settings: getCurrentSettings(state)
-});
 
 Breathe.propTypes = {
   settings: PropTypes.shape({

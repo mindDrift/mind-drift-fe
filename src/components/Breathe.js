@@ -50,19 +50,19 @@ const Breathe = ({ handleEndSession }) => {
       <p>{actionArr[index]}</p>
       <animated.div className={styles.flowerContainer} style={{
         transform: x
-          .interpolate({ range: [0, 1], output: [1, 1.4] })
-          .interpolate(x => `translateY(-${x}em) scale(${x})`) //stretch up
+          .interpolate({ range: [0, 1], output: [.6, 1.4] })
+          .interpolate(x => `translateY(-${x + .9}em) scale(${x})`) //stretch up
       }}>
         <animated.div className={styles.midPetal}></animated.div>
         <animated.div className={styles.leftPetal} style={{
           transform: x
-            .interpolate({ range: [0, 1], output: [55, 85] })
+            .interpolate({ range: [0, 1], output: [45, 85] })
             .interpolate(x => `rotate(${x}deg)`),
           transformOrigin: 'bottom right'
         }} ></animated.div>
         <animated.div className={styles.rightPetal} style={{
           transform: x
-            .interpolate({ range: [0, 1], output: [35, 5] })
+            .interpolate({ range: [0, 1], output: [45, 5] })
             .interpolate(x => `rotate(${x}deg)`),
           transformOrigin: 'bottom right'
         } }></animated.div>

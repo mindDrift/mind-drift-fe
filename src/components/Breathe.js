@@ -49,10 +49,10 @@ const Breathe = ({ handleEndSession }) => {
     <div className={styles.Breathe}>
       <p>{actionArr[index]}</p>
       <animated.div style={ {
-        opacity: x.interpolate({ range: [0, 1], output: [.3, .7] }),
+        opacity: x.interpolate({ range: [0, .3, .4, .6, .7, 1], output: [.3, .5, .4, .6, .8, .7] }),
         transform: x
           .interpolate({ range: [0, 1], output: [2, 4] })
-          .interpolate(x => `scale(${x})`),
+          .interpolate(x => `translateY(-${x}em) scale(${x})`)
       } } className={styles.Animate}>
       </animated.div>
       {!endSession && <button onClick={() => handleEndSession(time)}>Close</button>}

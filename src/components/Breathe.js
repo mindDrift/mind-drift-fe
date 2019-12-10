@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { useSpring, animated } from 'react-spring';
 import styles from './Breathe.css';
+import { getCurrentSettings } from '../selectors/settingsSelectors';
 
-const Breathe = ({ settings, handleEndSession }) => {
-  const { inhale, holdIn, exhale, holdOut, endTime } = settings;
+const Breathe = ({ handleEndSession }) => {
+  const { inhale, holdIn, exhale, holdOut, endTime } = useSelector(state => getCurrentSettings(state));
 
   const [counter, setCounter] = useState(0);
   const [time, setTime] = useState(0);
@@ -56,6 +58,10 @@ const Breathe = ({ settings, handleEndSession }) => {
     </div>
   );
 };
+
+const mapStateToProps = state => ({
+  settings: getCurrentSettings(state)
+});
 
 Breathe.propTypes = {
   settings: PropTypes.shape({

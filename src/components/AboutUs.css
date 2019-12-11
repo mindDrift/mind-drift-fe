@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   margin: 2em;
-  h1 {
+  .animated {
     font-family: Montserrat;
     font-weight: 700;
     font-size: 2em;

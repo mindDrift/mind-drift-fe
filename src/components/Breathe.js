@@ -48,24 +48,34 @@ const Breathe = ({ handleEndSession }) => {
   return (
     <div className={styles.Breathe}>
       <p>{actionArr[index]}</p>
-      <animated.div className={styles.flowerContainer} style={{
-        transform: x
-          .interpolate({ range: [0, 1], output: [.6, 1.4] })
-          .interpolate(x => `translateY(-${x * 3.7}em) scale(${x})`) //stretch up
-      }}>
-        <animated.div className={styles.midPetal}></animated.div>
-        <animated.div className={styles.leftPetal} style={{
+      <animated.div 
+        className={styles.flowerContainer} 
+        style={{
           transform: x
-            .interpolate({ range: [0, 1], output: [45, 85] })
-            .interpolate(x => `rotate(${x}deg)`),
-          transformOrigin: 'bottom right'
-        }} ></animated.div>
-        <animated.div className={styles.rightPetal} style={{
-          transform: x
-            .interpolate({ range: [0, 1], output: [45, 5] })
-            .interpolate(x => `rotate(${x}deg)`),
-          transformOrigin: 'bottom right'
-        } }></animated.div>
+            .interpolate({ range: [0, 1], output: [.6, 1.4] })
+            .interpolate(x => `translateY(-${x * 3.7}em) scale(${x})`) //stretch up
+        }}>
+        <animated.div 
+          className={styles.midPetal}>
+        </animated.div>
+        <animated.div 
+          className={styles.leftPetal} 
+          style={{
+            transform: x
+              .interpolate({ range: [0, 1], output: [45, 85] })
+              .interpolate(x => `rotate(${x}deg)`),
+            transformOrigin: 'bottom right'
+          }} >
+        </animated.div>
+        <animated.div 
+          className={styles.rightPetal} 
+          style={{
+            transform: x
+              .interpolate({ range: [0, 1], output: [45, 5] })
+              .interpolate(x => `rotate(${x}deg)`),
+            transformOrigin: 'bottom right'
+          }}>
+        </animated.div>
       </animated.div>
 
       {!endSession && <button onClick={() => handleEndSession(time)}>Close</button>}

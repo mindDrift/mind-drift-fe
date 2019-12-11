@@ -8,7 +8,7 @@ const AboutUs = () => {
       <section className={styles.AboutUs}>
         <h1>Meet Our Team:</h1>
         <div>
-          <img src="/src/assets/ABBEY.jpg" alt="Abbey Masters" />
+          <img src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/ABBEY.jpg" alt="Abbey Masters" />
           <h2>Abbey Masters</h2>
           <p>Abbey is a Full-Stack developer, and enjoys long walks at the park with her dog. And also chocolate chip cookies!</p>
         </div>

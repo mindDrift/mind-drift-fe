@@ -1,8 +1,30 @@
+.logo {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  p {
+    font-family: Damion;
+    font-size: 1.5em;
+    color: var(--peach);
+    word-wrap: break-word;
+    width: 65%;
+  }
+  img {
+    max-width: 200vw;
+    height: auto;
+  }
+}
+
 .AboutUs {
   display: flex;
   flex-direction: column;
-  margin: 2em;
-  .animated {
+  margin-bottom: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
+  h1 {
     font-family: Montserrat;
     font-weight: 700;
     font-size: 2em;

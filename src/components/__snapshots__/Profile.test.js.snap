@@ -33,3 +33,12 @@ exports[`Profile component renders the profile 1`] = `
   </section>
 </Fragment>
 `;
+
+exports[`Profile component renders the profile in a loading state 1`] = `
+<Fragment>
+  <Loading
+    loading={true}
+  />
+  <NavBar />
+</Fragment>
+`;

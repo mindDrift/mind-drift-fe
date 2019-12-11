@@ -7,18 +7,20 @@ import Loading from './Loading';
 const Profile = () => {
   const { user } = useAuth0();
 
-  const waitingForData = false;
+  const loading = !user;
   
   return (
     <>
-      <Loading loading={waitingForData} />
+      <Loading loading={loading} />
       <NavBar />
-      <section className={styles.ProfileArea}>
-        <img src={user.picture} alt="Profile" />
-        <h2>Your Profile:</h2>
-        <h3>Username:</h3><p> {user.name}</p>
-        <h3>Email:</h3><p> {user.email}</p>
-      </section>
+      {!loading &&
+        <section className={styles.ProfileArea}>
+          <img src={user.picture} alt="Profile" />
+          <h2>Your Profile:</h2>
+          <h3>Username:</h3><p> {user.name}</p>
+          <h3>Email:</h3><p> {user.email}</p>
+        </section>
+      }
     </>
   );
 };

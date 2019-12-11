@@ -18,4 +18,12 @@ describe('Profile component', () => {
     const wrapper = shallow(<Profile />);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('renders the profile in a loading state', () => {
+    useAuth0Mock.useAuth0 = () => ({
+      user: null,
+    });
+    const wrapper2 = shallow(<Profile />);
+    expect(wrapper2).toMatchSnapshot();
+  });
 });

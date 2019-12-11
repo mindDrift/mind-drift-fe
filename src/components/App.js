@@ -11,9 +11,9 @@ import styles from './App.css';
 import Loading from './Loading';
 
 const App = () => {
-  const { loading, user } = useAuth0();
+  const { loading } = useAuth0();
 
-  if(loading || !user) {
+  if(loading) {
     return (<Loading loading={loading} />);
   }
 

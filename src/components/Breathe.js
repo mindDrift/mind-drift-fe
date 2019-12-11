@@ -51,7 +51,7 @@ const Breathe = ({ handleEndSession }) => {
       <animated.div className={styles.flowerContainer} style={{
         transform: x
           .interpolate({ range: [0, 1], output: [.6, 1.4] })
-          .interpolate(x => `translateY(-${x + .9}em) scale(${x})`) //stretch up
+          .interpolate(x => `translateY(-${x * 3.7}em) scale(${x})`) //stretch up
       }}>
         <animated.div className={styles.midPetal}></animated.div>
         <animated.div className={styles.leftPetal} style={{

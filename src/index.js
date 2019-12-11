@@ -8,6 +8,7 @@ import history from './utils/history';
 import { Provider } from 'react-redux';
 import store from './store';
 import './reset.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const onRedirectCallback = appState => {
   history.push(

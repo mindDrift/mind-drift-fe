@@ -3,11 +3,11 @@
 .Breathe {
   text-align: center;
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  margin-top: 28vh;
+  height: 100vh;
   p {
     font-family: damion;
     font-size: 26px;
@@ -30,6 +30,16 @@
     border: none;
     color: white;
     cursor: pointer;
+  }
+  div[name='close'] {
+    position: absolute;
+    top: .5em;
+    right: .5em;
+  }
+  div[name='progress'] {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
   }
 }
 

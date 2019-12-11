@@ -70,7 +70,15 @@
     font-size: 14px;
   }
 
-  button[name='editButton'] {
+  button[name='editButton'] 
+  {
+    border: solid var(--light-blue) 4px;
+    border-radius: 10px;
+    background-color: white;
+    font-family: Montserrat;
+    font-weight: 200;
+    font-size: 14px;
+
     position: absolute;
     top: 0;
     right: 0;

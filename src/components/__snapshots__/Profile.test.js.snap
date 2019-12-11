@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile component renders the profile 1`] = `
+<Fragment>
+  <NavBar />
+  <section
+    className="ProfileArea"
+  >
+    <img
+      alt="Profile"
+    />
+    <h2>
+      Your Profile:
+    </h2>
+    <h3>
+      Username:
+    </h3>
+    <p>
+       
+      me
+    </p>
+    <h3>
+      Email:
+    </h3>
+    <p>
+       
+      me@me.com
+    </p>
+  </section>
+</Fragment>
+`;
+
+exports[`Profile component renders the profile in a loading state 1`] = `
+<div
+  className="Loading"
+>
+  Loading...
+</div>
+`;
+
+exports[`Profile component renders the profile in a loading state 2`] = `
+<div
+  className="Loading"
+>
+  Loading...
+</div>
+`;

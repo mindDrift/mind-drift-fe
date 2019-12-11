@@ -13,7 +13,20 @@ exports[`Home component renders the Home component 1`] = `
     <div
       className="logo"
     >
-      logo needed here
+      <img
+        alt="mindDrift logo"
+        src="/src/assets/mindDriftIcon.png"
+      />
+      <section
+        className="headerText"
+      >
+        <h2>
+          mind
+        </h2>
+        <h3>
+          Drift
+        </h3>
+      </section>
     </div>
     <Link
       to="/breathe"
@@ -28,7 +41,7 @@ exports[`Home component renders the Home component 1`] = `
       to="/settings"
     >
       <button
-        className="breatheButton"
+        className="setupButton"
       >
         Setup
       </button>

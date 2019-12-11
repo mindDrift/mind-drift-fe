@@ -82,9 +82,9 @@ const Breathe = ({ handleEndSession }) => {
           }}>
         </animated.div>
       </animated.div>
-      <div>
+      <p name='count-down'>
         {durationArr[index] - counter}
-      </div>
+      </p>
       <div name='progress'>
         <Progress now={100 * time / endTime} />
       </div>

@@ -1,0 +1,32 @@
+.WrapUpBody {
+  font-family: Montserrat;
+  font-weight: 200;
+  font-size: 1em;
+  margin: 1em;
+}
+
+.WrapUpFooter {
+  margin: 0.3em;
+  display: flex;
+  justify-content: center;
+
+  button {
+    border-radius: 6px;
+    color: white;
+    border: none;
+    margin: 0.2em;
+    width: 8em;
+    height: 2em;
+    background-color: var(--light-grey);
+    font-family: Montserrat;
+    font-weight: 200;
+    font-size: 10px;
+  }
+
+  button:hover {
+    background-color: var(--light-blue);
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+}

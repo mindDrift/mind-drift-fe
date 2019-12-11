@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component renders App 1`] = `
+<div
+  className="container"
+>
+  <BrowserRouter>
+    <Switch>
+      <PrivateRoute
+        component={[Function]}
+        exact={true}
+        path="/"
+      />
+      <PrivateRoute
+        component={[Function]}
+        path="/profile"
+      />
+      <PrivateRoute
+        component={[Function]}
+        path="/breathe"
+      />
+      <PrivateRoute
+        component={[Function]}
+        path="/settings"
+      />
+      <PrivateRoute
+        component={[Function]}
+        path="/edit-settings"
+      />
+    </Switch>
+  </BrowserRouter>
+</div>
+`;
+
+exports[`App component renders App in Loading state 1`] = `
+<div>
+  loading ...
+</div>
+`;

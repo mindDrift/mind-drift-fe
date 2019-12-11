@@ -1,0 +1,9 @@
+:root {
+  --light-blue: rgba(188, 221, 240);
+  --light-grey-rgb: 191, 191, 191;
+  --light-grey: rgba(191, 191, 191);
+  --dark-blue: rgba(92, 119, 149);
+  --light-green: rgba(203, 228, 200);
+  --peach: rgba(237, 178, 144);
+  --rust: rgba(169, 78, 21);
+}

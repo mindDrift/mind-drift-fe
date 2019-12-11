@@ -1,0 +1,87 @@
+.SettingsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  margin-top: 2em;
+  overflow: auto;
+  padding-bottom: 15%;
+  margin-bottom: 1em;
+
+  h2 {
+    font-family: Montserrat;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: var(--dark-blue);
+    margin-bottom: 2em;
+    margin-top: 1em;
+  }
+}
+
+.items {
+  list-style: none;
+  padding-left: 0;
+  position: relative;
+  border: solid 2px var(--light-green);
+  border-radius: 10px;
+  margin: 1em;
+  padding: 1em;
+  line-height: normal;
+  
+  h3 {
+    font-family: Montserrat;
+    font-weight: 200;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 0.25em;
+  }
+  p {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--dark-blue);
+    line-height: normal;
+  }
+
+  li {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--dark-blue);
+    line-height: normal;
+  }
+  ul {
+    margin-top: 0.5em;
+    margin-bottom:0.5em;
+  }
+
+  button[name='breatheButton'] {
+    width: 90%;
+    position: absolute;
+    bottom: 5%;
+    height: 2em;
+    border: solid var(--light-blue) 4px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    font-family: Montserrat;
+    font-weight: 200;
+    font-size: 14px;
+  }
+
+  button[name='editButton'] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 12px;
+  }
+  
+  &.selected {
+    box-shadow: 
+      0 0 1px  3px rgba(var(--light-grey-rgb), 0.3),
+      0 0 2px  6px rgba(var(--light-grey-rgb), 0.2),
+      0 0 3px  8px rgba(var(--light-grey-rgb), 0.1),
+      0 0 4px 10px rgba(var(--light-grey-rgb), 0.1);
+  }
+}

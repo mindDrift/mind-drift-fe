@@ -5,15 +5,11 @@ import styles from './Loading.css';
 const Loading = ({ loading }) => {
   const [displayLoading, setDisplayLoading] = useState(false);
   useEffect(() => {
-    if(loading) {
-      setDisplayLoading(loading);
-    }
-    else {
-      setTimeout(
-        setDisplayLoading(loading),
-        300
-      );
-    }
+    let timer = setTimeout(
+      () => setDisplayLoading(loading),
+      300
+    );
+    return () => timer && clearTimeout(timer);
   }, [loading]);
 
   if(!displayLoading) return (<></>);

@@ -9,6 +9,7 @@ import Settings from '../containers/Settings';
 import EditSettings from '../containers/EditSettings';
 import styles from './App.css';
 import Loading from './Loading';
+import AboutUs from './AboutUs';
 
 const App = () => {
   const { loading, user } = useAuth0();
@@ -26,6 +27,7 @@ const App = () => {
           <PrivateRoute path='/breathe' component={Session} />
           <PrivateRoute path='/settings' component={Settings} />
           <PrivateRoute path='/edit-settings' component={EditSettings} />
+          <PrivateRoute path='/about-us' component={AboutUs} />
         </Switch>
       </Router>
     </div>

@@ -16,10 +16,8 @@ export const setCurrentSettings = payload => ({
   payload: payload
 });
 
-export const SET_SELECTED_SETTINGS_ID = 'SET_SELECTED_SETTINGS_ID';
-export const setSelectedSettingsId = payload => ({
-  type: SET_SELECTED_SETTINGS_ID,
+export const SET_ID_TO_EDIT = 'SET_ID_TO_EDIT';
+export const setIdToEdit = payload => ({
+  type: SET_ID_TO_EDIT,
   payload: payload
 });
-
-

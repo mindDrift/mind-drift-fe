@@ -51,3 +51,15 @@
     — What Didn't Go So Well: 
       — Because we worked independently, there are now some holes we have to go back and fill. 
     — Could also go back and refactor some CSS. 
+
+## 12/10/2019
+-What Went Well:
+  * New animation by Maeve looks beautiful and is completely functional!
+  * Finished put and delete routes in settings.
+  * New logo on the homepage!
+  * The settings form is now fully functional and able to be edited and added to. 
+  * Testing is important, but not very fun. We've decided to share the load moving forward and doing a bit of it every day. We did some front-end and back-end testing today including all settings routes. 
+  * Dave fully understands redux!
+— What Didn't Go So Well: 
+  * Put route took a while, despite also testing all the other routes along the way.
+  * 

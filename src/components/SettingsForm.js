@@ -7,15 +7,15 @@ const SettingsForm = ({ settings, handleSubmit, handleChange }) => {
 
   return (
     <section className={styles.Form}>
-
+      <h2>Create a Breathing Pattern:</h2>
       <form onSubmit={handleSubmit}>
         <label>
-          title:
-          <input onChange={handleChange} type='text' name='title' placeholder='title' value={title} />
+          Title:
+          <input onChange={handleChange} type='text' name='title' placeholder=' title' value={title} />
         </label>
         <label>
-          description:
-          <textarea onChange={handleChange} name='description' placeholder='description' value={description} />
+          Description:
+          <textarea onChange={handleChange} name='description' placeholder=' description' value={description} />
         </label>
         <label>
           Inhale:

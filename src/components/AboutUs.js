@@ -7,14 +7,20 @@ const AboutUs = () => {
 
   const props = useSpring({
     opacity: 1,
-    from: { opacity: 0.5 },
+    from: { opacity: 0.1 },
     config: { duration: 1500 },
   });
 
   return (
     <>
+      <animated.div
+        className={styles.logo}
+        style={props}>
+        <img src="/src/assets/brownFlowerIcon.png" />
+        <p>mindDrift is a mindful breathing app, aimed to make your experience seamless and convenient.</p>
+      </animated.div>
       <section className={styles.AboutUs}>
-        <animated.h1 className={styles.animated} style={props}>Meet Our Team:</animated.h1>
+        <h1>Meet Our Team:</h1>
         <div>
           <img src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/ABBEY.jpg" alt="Abbey Masters" />
           <h2>Abbey Masters</h2>

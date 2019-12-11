@@ -11,12 +11,12 @@
     margin: auto;
     margin-bottom: 25%;
     margin-top: 18%;
+    img {
+      width: 65%;
+      height: auto;
+    }
   }
 
-  img {
-    width: 65%;
-    height: auto;
-  }
 
   .headerText {
     display: flex;

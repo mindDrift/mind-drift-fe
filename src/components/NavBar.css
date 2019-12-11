@@ -11,7 +11,6 @@
     font-size: 12px;
     margin-left: 1.5em;
   }
-
   button:hover {
     background-color: var(--light-blue);
     border: none;
@@ -39,5 +38,9 @@
   }
   a:hover {
     font-weight: 400;
+  }
+  img {
+    width: 65%;
+    height: auto;
   }
 }

@@ -10,11 +10,14 @@ export const [
   FETCH_SETTINGS_DONE,
 ] = createAction('FETCH_SETTINGS', getSettings);
 
-export const GET_LAST_USER_SESSION = 'GET_LAST_USER_SESSION';
-export const SET_SETTINGS = 'SET_SETTINGS';
 export const SET_CURRENT_SETTINGS = 'SET_CURRENT_SETTINGS';
-
 export const setCurrentSettings = payload => ({
   type: SET_CURRENT_SETTINGS,
+  payload: payload
+});
+
+export const SET_ID_TO_EDIT = 'SET_ID_TO_EDIT';
+export const setIdToEdit = payload => ({
+  type: SET_ID_TO_EDIT,
   payload: payload
 });

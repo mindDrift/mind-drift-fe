@@ -6,6 +6,7 @@ import Home from './Home';
 import Profile from './Profile';
 import Session from '../containers/Session';
 import Settings from '../containers/Settings';
+import EditSettings from '../containers/EditSettings';
 import styles from './App.css';
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
           <PrivateRoute path='/profile' component={Profile} />
           <PrivateRoute path='/breathe' component={Session} />
           <PrivateRoute path='/settings' component={Settings} />
+          <PrivateRoute path='/edit-settings' component={EditSettings} />
         </Switch>
       </Router>
     </div>

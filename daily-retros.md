@@ -62,4 +62,3 @@
   * Dave fully understands redux!
 — What Didn't Go So Well: 
   * Put route took a while, despite also testing all the other routes along the way.
-  * 

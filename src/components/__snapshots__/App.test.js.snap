@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App component renders App 1`] = `
-<div>
+<div
+  className="container"
+>
   <BrowserRouter>
     <Switch>
       <PrivateRoute
@@ -16,6 +18,14 @@ exports[`App component renders App 1`] = `
       <PrivateRoute
         component={[Function]}
         path="/breathe"
+      />
+      <PrivateRoute
+        component={[Function]}
+        path="/settings"
+      />
+      <PrivateRoute
+        component={[Function]}
+        path="/edit-settings"
       />
     </Switch>
   </BrowserRouter>

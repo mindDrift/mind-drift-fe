@@ -21,7 +21,8 @@ const SettingsCards = ({ settingsList, handleSelectSettings, handleEdit, handleB
         className={`${styles.items} ${selected && styles.selected || ''}`}
         key={_id}
         onClick={() => handleSelectSettings(_id)}>
-        {selected && editable && <button name='editButton' onClick={() => handleEdit(_id)}>edit</button>}
+        {selected && editable && <button name='editButton' onClick={() => handleEdit(_id)}><img src='https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/editICON.png(549 B)
+' alt='edit'/></button>}
         <h3>{title}</h3>
         <p>{description}</p>
         <ul>

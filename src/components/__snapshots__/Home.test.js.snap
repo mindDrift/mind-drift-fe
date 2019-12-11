@@ -15,7 +15,7 @@ exports[`Home component renders the Home component 1`] = `
     >
       <img
         alt="mindDrift logo"
-        src="/src/assets/mindDriftIcon.png"
+        src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/mindDriftIcon.png"
       />
       <section
         className="headerText"

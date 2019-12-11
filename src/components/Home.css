@@ -3,43 +3,62 @@
     text-align: center;
     text-decoration: none;
   }
-}
 
-.logo {
-  height: 25vh;
-  width: 60%;
-  max-width: 420px;
-  margin: auto;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  background-color: var(--peach);
-  border-radius: 80px;
-}
+  .logo {
+    height: 25vh;
+    width: 60%;
+    max-width: 420px;
+    margin: auto;
+    margin-bottom: 25%;
+    margin-top: 18%;
+  }
 
-.breatheContainer {
-  text-align: center;
-}
+  img {
+    width: 65%;
+    height: auto;
+  }
 
-.breatheButton {
-  display: block;
-  border: solid var(--light-blue) 4px;
-  border-radius: 15px;
-  background-color: white;
-  width: 15em;
-  height: 3em;
-  margin: auto;
-  margin-top: 2em;
-  color: black;
-  font-family: Montserrat;
-  font-weight: 200;
-  font-size: 14px;
-
-  &:hover {
-    border: none;
-    background-color: var(--light-blue);
-    color: white;
-    cursor: pointer;
-    text-decoration: none;
+  .headerText {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    h2 {
+      font-family: Montserrat;
+      font-weight: 200;
+      line-height: 1.5;
+    }
+    h3 {
+      font-family: Damion;
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--peach);
+    }
+  }
+  
+  .breatheButton, .setupButton {
+    display: block;
+    border: solid var(--light-blue) 4px;
+    border-radius: 15px;
+    background-color: white;
+    width: 15em;
+    height: 3em;
+    margin: auto;
+    margin-top: 2em;
+    color: black;
+    font-family: Montserrat;
+    font-weight: 200;
+    font-size: 14px;
+  
+    &:hover {
+      border: none;
+      background-color: var(--light-blue);
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+  .breatheContainer {
+    text-align: center;
   }
 }
 

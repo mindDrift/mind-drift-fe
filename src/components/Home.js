@@ -4,19 +4,15 @@ import NavBar from './NavBar';
 import styles from './Home.css';
 
 const Home = () => {
-  const divStyle = {
-    position: 'fixed',
-    left: '30%',
-    right: '30%',
-    top: '25%',
-  };
   return (
     <section className={styles.Home}>
       <header>
         <NavBar />
       </header>
-      <div style={divStyle}>logo needed here</div>
       <div className={styles.breatheContainer}>
+        <div className={styles.logo}>
+          logo needed here
+        </div>
         <Link to="/breathe">
           <button className={styles.breatheButton}>Breathe</button>
         </Link>

@@ -1,31 +1,45 @@
 .Home {
- a {
-   text-align: center;
- }
+  a {
+    text-align: center;
+    text-decoration: none;
+  }
+}
+
+.logo {
+  height: 25vh;
+  width: 60%;
+  max-width: 420px;
+  margin: auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  background-color: var(--peach);
+  border-radius: 80px;
 }
 
 .breatheContainer {
   text-align: center;
-  margin-top: 35vh;
-
-  button:hover {
-    border: none;
-    background-color: var(--light-blue);
-    color: white;
-    cursor: pointer;
-  }
 }
 
 .breatheButton {
+  display: block;
   border: solid var(--light-blue) 4px;
   border-radius: 15px;
   background-color: white;
   width: 15em;
   height: 3em;
+  margin: auto;
   margin-top: 2em;
   color: black;
   font-family: Montserrat;
   font-weight: 200;
   font-size: 14px;
+
+  &:hover {
+    border: none;
+    background-color: var(--light-blue);
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+  }
 }
 

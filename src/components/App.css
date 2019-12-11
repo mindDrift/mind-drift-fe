@@ -1,0 +1,6 @@
+@import './vars.css';
+
+.container {
+  max-width: 700px;
+  margin: auto;
+}

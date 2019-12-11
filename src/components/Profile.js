@@ -6,7 +6,9 @@ import Loading from './Loading';
 
 const Profile = () => {
   const { user } = useAuth0();
+
   const waitingForData = false;
+  
   return (
     <>
       <Loading loading={waitingForData} />

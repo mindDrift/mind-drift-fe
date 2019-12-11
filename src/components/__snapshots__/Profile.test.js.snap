@@ -2,12 +2,16 @@
 
 exports[`Profile component renders the profile 1`] = `
 <Fragment>
+  <Loading
+    loading={false}
+  />
   <NavBar />
   <section
     className="ProfileArea"
   >
     <img
       alt="Profile"
+      src="http://domain.com/pictures/0000.png"
     />
     <h2>
       Your Profile:
@@ -28,20 +32,4 @@ exports[`Profile component renders the profile 1`] = `
     </p>
   </section>
 </Fragment>
-`;
-
-exports[`Profile component renders the profile in a loading state 1`] = `
-<div
-  className="Loading"
->
-  Loading...
-</div>
-`;
-
-exports[`Profile component renders the profile in a loading state 2`] = `
-<div
-  className="Loading"
->
-  Loading...
-</div>
 `;

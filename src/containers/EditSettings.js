@@ -2,21 +2,27 @@ import SettingsForm from '../components/SettingsForm';
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useAuth0 } from '../react-auth0-spa';
-import { postSettings } from '../services/setting';
+import { postSettings, updateSettings } from '../services/setting';
 import PropTypes from 'prop-types';
-import { getCurrentSettings } from '../selectors/settingsSelectors';
+import { getCurrentSettings, getIdToEdit } from '../selectors/settingsSelectors';
 import { setCurrentSettings } from '../actions/settingsActions';
 
 const EditSettings = ({ history }) => {
   const { user } = useAuth0();
   const dispatch = useDispatch();
   const currentSettings = useSelector(state => getCurrentSettings(state));
+  const idToEdit = useSelector(state => getIdToEdit(state));
   const [userSettings, setUserSettings] = useState(currentSettings);
 
   const handleSubmit = event => {
     event.preventDefault();
     userSettings.userId = user.sub;
-    postSettings(userSettings)
+
+    const updateOrPost = idToEdit ? 
+      (id, settings) => updateSettings(id, settings) :
+      (_, settings) => postSettings(settings);
+      
+    updateOrPost(idToEdit, userSettings)
       .then(settings => {
         dispatch(setCurrentSettings(settings));
         history.push('/settings');

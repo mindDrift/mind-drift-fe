@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useAuth0 } from '../react-auth0-spa';
-import {
-  fetchSettingsPromise,
-  setCurrentSettings,
-  setSelectedSettingsId
-} from '../actions/settingsActions';
+import { fetchSettingsPromise, setCurrentSettings, setIdToEdit } from '../actions/settingsActions';
 import { getSettings, getSettingsLoading } from '../selectors/settingsSelectors';
 import NavBar from '../components/NavBar';
 import SettingsCards from '../components/SettingsCards';
@@ -32,8 +28,8 @@ const Settings = ({ history }) => {
   const handleBreatheNow = () => {
     history.push('/breathe');
   };
-  const handleEdit = (id = '') => {
-    dispatch(setSelectedSettingsId(id));
+  const handleEdit = id => {
+    dispatch(setIdToEdit(id));
     history.push('/edit-settings');
   };
 

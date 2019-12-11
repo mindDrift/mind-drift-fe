@@ -56,7 +56,7 @@
     margin-bottom:0.5em;
   }
 
-  button {
+  button[name='breatheButton'] {
     width: 90%;
     position: absolute;
     bottom: 5%;
@@ -70,6 +70,13 @@
     font-size: 14px;
   }
 
+  button[name='editButton'] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 12px;
+  }
+  
   &.selected {
     box-shadow: 
       0 0 1px  3px rgba(var(--light-grey-rgb), 0.3),

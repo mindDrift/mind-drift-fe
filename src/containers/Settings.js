@@ -15,7 +15,6 @@ const Settings = ({ history }) => {
   const loading = useSelector(state => getSettingsLoading(state));
   const currentSettings = useSelector(state => getCurrentSettings(state));
   
-
   const dispatch = useDispatch();
   const updateSettings = () => dispatch(fetchSettingsPromise(user.sub));
   useEffect(() => {

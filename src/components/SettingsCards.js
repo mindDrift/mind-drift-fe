@@ -21,7 +21,7 @@ const SettingsCards = ({ settingsList, handleSelectSettings, handleEdit, handleB
         className={`${styles.items} ${selected && styles.selected || ''}`}
         key={_id}
         onClick={() => handleSelectSettings(_id)}>
-        {editable && <button onClick={() => handleEdit(_id)}>edit</button>}
+        {selected && editable && <button name='editButton' onClick={() => handleEdit(_id)}>edit</button>}
         <h3>{title}</h3>
         <p>{description}</p>
         <ul>
@@ -31,7 +31,7 @@ const SettingsCards = ({ settingsList, handleSelectSettings, handleEdit, handleB
           {holdOut > 0 && <li>Hold: {holdOut}</li>}
         </ul>
         <p>Continue for {endTime} seconds</p>
-        {selected && <button onClick={handleBreatheNow}>Breathe now</button>}
+        {selected && <button name='breatheButton' onClick={handleBreatheNow}>Breathe now</button>}
       </li>
     );
   });

@@ -17,6 +17,14 @@
     margin-bottom: 2em;
     margin-top: 1em;
   }
+
+  button[name='addButton'] {
+    width: 90%;
+    border: solid var(--light-blue) 4px;
+    border-radius: 10px;
+    background-color: white;
+    color: var(--dark-blue);
+  }
 }
 
 .items {
@@ -36,6 +44,7 @@
     text-transform: uppercase;
     margin-bottom: 0.25em;
   }
+
   p {
     font-family: Montserrat;
     font-weight: 400;

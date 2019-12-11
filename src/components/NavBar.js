@@ -17,7 +17,7 @@ const NavBar = () => {
           <Link to="/"><img src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/HOMEicon.png" alt="Home" /></Link>&nbsp;
           <Link to="/profile"><img src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/PROFILEicon.png" alt="Profile" /></Link>
           <Link to="/settings"><img src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/SETTINGSicon.png" alt="Settings" /></Link>
-          <Link to="/about-us"><img src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/ABOUTUSicon.png" alt="About Us" /></Link>
+          <Link to="/about-us"><img src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/FLOWERicon.png" alt="About Us" /></Link>
         </span>
       )}  
     </div>

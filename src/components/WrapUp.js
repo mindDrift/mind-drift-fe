@@ -22,8 +22,8 @@ const WrapUp = ({ handleClose }) => {
   );
 };
 
-export default WrapUp;
-
 WrapUp.propTypes = {
   handleClose: PropTypes.func.isRequired,
 };
+
+

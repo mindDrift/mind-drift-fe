@@ -1,12 +1,12 @@
 .WrapUpBody {
   font-family: Montserrat;
   font-weight: 200;
-  font-size: 12px;
+  font-size: 1em;
   margin: 1em;
 }
 
 .WrapUpFooter {
-  margin: 0.5em;
+  margin: 0.3em;
   display: flex;
   justify-content: center;
 
@@ -14,6 +14,7 @@
     border-radius: 6px;
     color: white;
     border: none;
+    margin: 0.2em;
     width: 8em;
     height: 2em;
     background-color: var(--light-grey);

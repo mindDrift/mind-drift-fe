@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useAuth0 } from '../react-auth0-spa';
-import { fetchSettingsPromise, setCurrentSettings } from '../actions/settingsActions';
+import { fetchSettingsPromise, setCurrentSettings, setIdToEdit } from '../actions/settingsActions';
 import { getSettings, getSettingsLoading, getCurrentSettings } from '../selectors/settingsSelectors';
 import NavBar from '../components/NavBar';
 import SettingsCards from '../components/SettingsCards';
@@ -15,7 +15,6 @@ const Settings = ({ history }) => {
   const loading = useSelector(state => getSettingsLoading(state));
   const currentSettings = useSelector(state => getCurrentSettings(state));
   
-
   const dispatch = useDispatch();
   const updateSettings = () => dispatch(fetchSettingsPromise(user.sub));
   useEffect(() => {
@@ -32,7 +31,8 @@ const Settings = ({ history }) => {
     history.push('/breathe');
   };
   const handleEdit = id => {
-    console.log('handle edit of', id);
+    dispatch(setIdToEdit(id));
+    history.push('/edit-settings');
   };
 
   return (

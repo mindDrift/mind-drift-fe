@@ -11,13 +11,17 @@ const Home = () => {
       </header>
       <div className={styles.breatheContainer}>
         <div className={styles.logo}>
-          logo needed here
+          <img src="/src/assets/mindDriftIcon.png" alt="mindDrift logo" />
+          <section className={styles.headerText}>
+            <h2>mind</h2>
+            <h3>Drift</h3>
+          </section>
         </div>
         <Link to="/breathe">
           <button className={styles.breatheButton}>Breathe</button>
         </Link>
         <Link to="/settings">
-          <button className={styles.breatheButton}>Setup</button>
+          <button className={styles.setupButton}>Setup</button>
         </Link>
       </div>
     </section>

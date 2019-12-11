@@ -9,7 +9,7 @@ const Home = () => {
       <header>
         <NavBar />
       </header>
-      <div className={styles.breatheContainer}>
+      <div className={styles.homeContainer}>
         <div className={styles.logo}>
           <img src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/mindDriftIcon.png" alt="mindDrift logo" />
           <section className={styles.headerText}>

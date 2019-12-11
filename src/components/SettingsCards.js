@@ -42,7 +42,7 @@ const SettingsCards = ({ settingsList, handleSelectSettings, handleEdit, handleB
       <ul className={styles.list}>
         {settingsElements}
       </ul>
-      <button onClick={() => handleEdit('')}>+</button>
+      <button name='addButton' onClick={() => handleEdit('')}>+</button>
     </section>
   );
 };

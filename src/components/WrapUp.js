@@ -26,4 +26,4 @@ WrapUp.propTypes = {
   handleClose: PropTypes.func.isRequired,
 };
 
-
+export default WrapUp;

@@ -11,7 +11,7 @@ const Home = () => {
       </header>
       <div className={styles.breatheContainer}>
         <div className={styles.logo}>
-          <img src="/src/assets/mindDriftIcon.png" alt="mindDrift logo" />
+          <img src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/mindDriftIcon.png" alt="mindDrift logo" />
           <section className={styles.headerText}>
             <h2>mind</h2>
             <h3>Drift</h3>

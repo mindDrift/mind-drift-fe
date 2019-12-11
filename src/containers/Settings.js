@@ -6,6 +6,7 @@ import { getSettings, getSettingsLoading, getCurrentSettings } from '../selector
 import NavBar from '../components/NavBar';
 import SettingsCards from '../components/SettingsCards';
 import PropTypes from 'prop-types';
+import Loading from '../components/Loading';
 
 const Settings = ({ history }) => {
   const { user } = useAuth0();
@@ -37,19 +38,17 @@ const Settings = ({ history }) => {
 
   return (
     <>
+      <Loading loading={loading} />
       <header>
         <NavBar />
       </header>
-      { loading && <h2>Loading ... </h2> }
-      { !loading && 
-        <SettingsCards 
-          settingsList={settingsList} 
-          handleSelectSettings={handleSelectSettings}
-          handleBreatheNow={handleBreatheNow} 
-          handleEdit={handleEdit}
-          selectedId={selectedId}
-        />
-      }
+      <SettingsCards 
+        settingsList={settingsList} 
+        handleSelectSettings={handleSelectSettings}
+        handleBreatheNow={handleBreatheNow} 
+        handleEdit={handleEdit}
+        selectedId={selectedId}
+      />
     </>
   );
 };

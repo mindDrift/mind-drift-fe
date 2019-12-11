@@ -8,7 +8,7 @@ exports[`Home component renders the Home component 1`] = `
     <NavBar />
   </header>
   <div
-    className="breatheContainer"
+    className="homeContainer"
   >
     <div
       className="logo"
@@ -28,24 +28,28 @@ exports[`Home component renders the Home component 1`] = `
         </h3>
       </section>
     </div>
-    <Link
-      to="/breathe"
+    <div
+      className="linksContainer"
     >
-      <button
-        className="breatheButton"
+      <Link
+        to="/breathe"
       >
-        Breathe
-      </button>
-    </Link>
-    <Link
-      to="/settings"
-    >
-      <button
-        className="setupButton"
+        <button
+          className="breatheButton"
+        >
+          Breathe
+        </button>
+      </Link>
+      <Link
+        to="/settings"
       >
-        Setup
-      </button>
-    </Link>
+        <button
+          className="setupButton"
+        >
+          Setup
+        </button>
+      </Link>
+    </div>
   </div>
 </section>
 `;

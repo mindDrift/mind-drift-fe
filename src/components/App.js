@@ -8,17 +8,18 @@ import Session from '../containers/Session';
 import Settings from '../containers/Settings';
 import EditSettings from '../containers/EditSettings';
 import styles from './App.css';
+import Loading from './Loading';
 
 const App = () => {
-  const { loading } = useAuth0();
+  const { loading, user } = useAuth0();
 
-  if(loading) {
-    return <div>loading ...</div>;
+  if(loading || !user) {
+    return (<Loading loading={loading} />);
   }
 
   return (
     <div className={styles.container}>
-      <Router >
+      <Router>
         <Switch>
           <PrivateRoute exact path='/' component={Home} />
           <PrivateRoute path='/profile' component={Profile} />

@@ -1,5 +1,11 @@
 .NavBar {
   margin-top: 2em;
+  
+  a {
+    text-align: center;
+    text-decoration: none;
+  }
+
   button {
     border: solid var(--light-blue) 2px;
     border-radius: 8px;
@@ -28,16 +34,11 @@
   background-color: var(--light-grey);
   width: 100vw;
   max-width: 700px;
+  height: calc(38px + 2vh);
   a {
-    text-decoration: none;
-    color: white;
-    font-family: Montserrat;
-    margin: 1em;
-    font-weight: 200;
-    font-size: 14px;
-  }
-  a:hover {
-    font-weight: 400;
+    margin: auto;
+    margin-left: 1em;
+    margin-right: 1em;
   }
   img {
     width: 65%;

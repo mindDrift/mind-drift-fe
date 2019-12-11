@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { useSpring, animated } from 'react-spring';
 import styles from './Breathe.css';
 import { getCurrentSettings } from '../selectors/settingsSelectors';
+import WrapUp from './WrapUp';
+import Progress from './Progress';
 
 const Breathe = ({ handleEndSession }) => {
   const { inhale, holdIn, exhale, holdOut, endTime } = useSelector(state => getCurrentSettings(state));
@@ -16,14 +18,12 @@ const Breathe = ({ handleEndSession }) => {
 
   const durationArr = [inhale, holdIn, exhale, holdOut];
   const actionArr = ['inhale', 'hold', 'exhale', 'hold'];
-
-
+  
   const { x } = useSpring({ from: { x: 0 }, x: state ? 1 : 0, config: { duration: (durationArr[index] * 1000) } });
 
   useEffect(() => {
     if(time > endTime) {
       setEndSession(true);
-      handleEndSession(time);
       return;
     } 
 
@@ -47,6 +47,11 @@ const Breathe = ({ handleEndSession }) => {
 
   return (
     <div className={styles.Breathe}>
+      {!endSession && 
+        <div onClick={() => handleEndSession(time)} name='close' className='close' aria-label='Close'>
+          <span aria-hidden='true'>&times;</span>
+        </div>
+      }
       <p>{actionArr[index]}</p>
       <animated.div 
         className={styles.flowerContainer} 
@@ -77,8 +82,16 @@ const Breathe = ({ handleEndSession }) => {
           }}>
         </animated.div>
       </animated.div>
+      <div>
+        {durationArr[index] - counter}
+      </div>
+      <div name='progress'>
+        <Progress now={100 * time / endTime} />
+      </div>
+      <div>
+        {endSession && <WrapUp handleClose={() => handleEndSession(time)} />}
+      </div>
 
-      {!endSession && <button onClick={() => handleEndSession(time)}>Close</button>}
     </div>
   );
 };

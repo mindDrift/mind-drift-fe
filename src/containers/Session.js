@@ -23,7 +23,7 @@ const Session = ({ history }) => {
     holdOut: 2,
     endTime: 180
   };
-  const handleSubmit = () => {
+  const handleClose = () => {
     postSession(startTime, duration, user.sub, settings);
     history.push('/');
   };
@@ -31,7 +31,7 @@ const Session = ({ history }) => {
   return (
     <>
       <Breathe handleEndSession={handleEndSession} settings={settings} />
-      {endSession && <WrapUp handleSubmit={handleSubmit} />}
+      {endSession && <WrapUp handleClose={handleClose} onHide={() => console.log('hide')}/>}
     </>
   );
 };

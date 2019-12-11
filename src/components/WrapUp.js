@@ -1,13 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './WrapUp.css';
+import Modal from 'react-bootstrap/Modal';
 
-const WrapUp = ({ handleSubmit }) => {
-
+const WrapUp = ({ handleClose }) => {
   return (
-    <section className={styles.WrapUp}>
-      <p>Session complete ... how do you feel?</p>
-      <button onClick={handleSubmit}>Submit</button>
+    <section>
+      <Modal
+        show={true}
+        onHide={() => {}}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <h4 className={styles.WrapUpBody}>Session Complete!</h4>
+        <div className={styles.WrapUpFooter} >
+          <button onClick={handleClose}>Close</button>
+        </div>
+      </Modal>
     </section>
   );
 };
@@ -15,7 +25,5 @@ const WrapUp = ({ handleSubmit }) => {
 export default WrapUp;
 
 WrapUp.propTypes = {
-  handleSubmit: PropTypes.func.isRequired
+  handleClose: PropTypes.func.isRequired,
 };
-
-

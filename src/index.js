@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as serviceWorker from './serviceWorker';
 import 'regenerator-runtime/runtime';
 import App from './components/App';
 import { Auth0Provider } from './react-auth0-spa';
@@ -32,5 +31,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
-
-serviceWorker.unregister();

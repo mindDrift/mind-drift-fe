@@ -16,7 +16,7 @@ const AboutUs = () => {
       <animated.div
         className={styles.logo}
         style={props}>
-        <img src="/src/assets/brownFlowerIcon.png" />
+        <img src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/brownFlowerIcon.png" />
         <p>mindDrift is a mindful breathing app, aimed to make your experience seamless and convenient.</p>
       </animated.div>
       <section className={styles.AboutUs}>

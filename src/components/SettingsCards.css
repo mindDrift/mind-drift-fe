@@ -103,21 +103,22 @@
   }
 
   button[name='editButton'] {
-    border: solid var(--light-blue) 4px;
+    border: transparent var(--light-blue) 1px;
     width: 2em;
     height: 2em;
+    margin: .5em;
     border-radius: 10px;
     background-color: white;
     position: absolute;
-    top: 2%;
-    right: 2%;
+    top: 0;
+    right: 0;
+
+    &:hover, &:active {
+      border: solid var(--light-blue) 1px;
+    }
 
     img {
       width: 1.5em;
-      height: 1.5em;
-      position: absolute;
-      top: 2%;
-      right: 2%;
     }
   }
 

@@ -23,8 +23,7 @@ const Profile = () => {
       {!loading &&
         <section className={styles.ProfileArea}>
           <img src={user.picture} alt="Profile" />
-          <h2>Your Profile:</h2>
-          <p>Hello, {user.name}</p>
+          <h2>Hello, {user.name}</h2>
           <div>
             <Achievements achieves={achieves} />
           </div>

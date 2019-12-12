@@ -3,25 +3,25 @@ import PropTypes from 'prop-types';
 import styles from './SettingsCards.css';
 
 const SettingsCards = ({ settingsList, handleSelectSettings, handleEdit, handleBreatheNow, selectedId }) => {
-  const settingsElements = settingsList.map(({ 
-    _id, 
+  const settingsElements = settingsList.map(({
+    _id,
     userId,
-    title, 
-    description, 
-    inhale, 
-    holdIn, 
-    exhale, 
-    holdOut, 
+    title,
+    description,
+    inhale,
+    holdIn,
+    exhale,
+    holdOut,
     endTime
   }) => {
     const editable = !userId.includes('__default__');
     const selected = selectedId === _id;
     return (
-      <li 
+      <li
         className={`${styles.items} ${selected && styles.selected || ''}`}
         key={_id}
         onClick={() => handleSelectSettings(_id)}>
-        {selected && editable && <button name='editButton' onClick={() => handleEdit(_id)}><img src='https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/editICON.png' alt='edit'/></button>}
+        {selected && editable && <button name='editButton' onClick={() => handleEdit(_id)}><img src='https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/editICON.png' alt='edit' /></button>}
         <h3>{title}</h3>
         <p>{description}</p>
         <ul>

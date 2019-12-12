@@ -17,7 +17,7 @@ exports[`Nav Bar component renders Nav Bar 1`] = `
     >
       <img
         alt="Home"
-        src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/HOMEicon.png"
+        src="test-file-stub"
       />
     </Link>
      
@@ -26,7 +26,7 @@ exports[`Nav Bar component renders Nav Bar 1`] = `
     >
       <img
         alt="Profile"
-        src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/PROFILEicon.png"
+        src="test-file-stub"
       />
     </Link>
     <Link
@@ -34,7 +34,7 @@ exports[`Nav Bar component renders Nav Bar 1`] = `
     >
       <img
         alt="Settings"
-        src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/SETTINGSicon.png"
+        src="test-file-stub"
       />
     </Link>
     <Link
@@ -42,7 +42,7 @@ exports[`Nav Bar component renders Nav Bar 1`] = `
     >
       <img
         alt="About Us"
-        src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/FLOWERicon.png"
+        src="test-file-stub"
       />
     </Link>
   </span>

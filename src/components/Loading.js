@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Loading.css';
+import mindDriftIcon from '../assets/mindDriftIcon.png';
 
 const Loading = ({ loading }) => {
   const [displayLoading, setDisplayLoading] = useState(false);
@@ -17,7 +18,7 @@ const Loading = ({ loading }) => {
   return (
     <div className={styles.Loading}>
       <div name='pulsing'>
-        <img src='https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/mindDriftIcon.png' alt='Loading' />
+        <img src={mindDriftIcon} alt='Loading' />
       </div>
     </div>
   );

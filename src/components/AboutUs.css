@@ -21,7 +21,7 @@
 .AboutUs {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2em;
+  margin-bottom: 4em;
   margin-left: 2em;
   margin-right: 2em;
   h1 {

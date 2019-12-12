@@ -38,7 +38,8 @@ const SettingsCards = ({ settingsList, handleSelectSettings, handleEdit, handleB
 
   return (
     <section className={styles.SettingsList}>
-      <h2>Pick Your Breathing Method:</h2>
+      <h2>Breathing Methods:</h2>
+      <h4>Pick a breathing method from the list below, or customize your own!</h4>
       <ul className={styles.list}>
         {settingsElements}
       </ul>

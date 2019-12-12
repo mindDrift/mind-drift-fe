@@ -14,8 +14,9 @@ The user is able to log-in using an email and password, and is immediately sent 
 The user is also able to go to our Setup page and pick a different default breathing pattern, or even create their own pattern dependent on their own needs. 
 
 ## Data Aggregation
-
-
+Routes have been set up to track milestones for each user, including:
+* Average Session Time
+* Total Session Time
 
 ## How It’s Built
 mindDrift's front-end was built using React and Redux. The back-end was built using Node.js, MongoDB, and Express. Our animations were created with the react-spring library. The back-end is deployed to Heroku, and the front-end is deployed to Netlify. 

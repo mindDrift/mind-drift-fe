@@ -18,7 +18,9 @@ const Breathe = ({ handleEndSession }) => {
 
   const durationArr = [inhale, holdIn, exhale, holdOut];
   const actionArr = ['inhale', 'hold', 'exhale', 'hold'];
-  
+
+  const countdownTime = Math.max(0, durationArr[index] - counter);
+
   const { x } = useSpring({ from: { x: 0 }, x: state ? 1 : 0, config: { duration: (durationArr[index] * 1000) } });
 
   useEffect(() => {
@@ -29,7 +31,8 @@ const Breathe = ({ handleEndSession }) => {
 
     if(counter > durationArr[index]) {
       setCounter(0);
-      const nextIndex = durationArr[index + 1] === 0 ? index + 2 : index + 1;
+      let nextIndex = (index + 1) % 4;
+      if(durationArr[nextIndex] === 0) nextIndex++;
  
       setIndex(nextIndex % 4);
       if(actionArr[nextIndex % 4] !== 'hold') {
@@ -83,7 +86,7 @@ const Breathe = ({ handleEndSession }) => {
         </animated.div>
       </animated.div>
       <p name='count-down'>
-        {durationArr[index] - counter}
+        {countdownTime}
       </p>
       <div name='progress'>
         <Progress now={100 * time / endTime} />

@@ -13,10 +13,10 @@ const initialState = {
     userId: '__default__',
     title: '',
     description: '',
-    inhale: 5,
-    holdIn: 4,
-    exhale: 5,
-    holdOut: 4,
+    inhale: 4,
+    holdIn: 3,
+    exhale: 4,
+    holdOut: 3,
     endTime: 126
   }
 };

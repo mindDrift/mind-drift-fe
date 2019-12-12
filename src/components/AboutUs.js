@@ -35,7 +35,7 @@ const AboutUs = () => {
         <div>
           <img src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/MAEVE.jpg" alt="Maeve Griffin" />
           <h2>Maeve Griffin</h2>
-          <p>Abbey is a Full-Stack developer, and enjoys long walks at the park with her dog. And also chocolate chip cookies!</p>
+          <p>Maeve is a Full-Stack Javascript developer who has learned a lot about React Spring.  And likes trying new chocolate chip cookie recipes.</p>
         </div>
       </section>
     </>

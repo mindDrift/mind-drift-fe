@@ -1,55 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Home component renders the Home component 1`] = `
-<section
-  className="Home"
->
-  <header>
-    <NavBar />
-  </header>
-  <div
-    className="homeContainer"
+<Fragment>
+  <section
+    className="Home"
   >
+    <NavBar />
     <div
-      className="logo"
+      className="homeContainer"
     >
-      <img
-        alt="mindDrift logo"
-        src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/mindDriftIcon.png"
-      />
-      <section
-        className="headerText"
+      <div
+        className="logo"
       >
-        <h2>
-          mind
-        </h2>
-        <h3>
-          Drift
-        </h3>
-      </section>
-    </div>
-    <div
-      className="linksContainer"
-    >
-      <Link
-        to="/breathe"
-      >
-        <button
-          className="breatheButton"
+        <img
+          alt="mindDrift logo"
+          src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/mindDriftIcon.png"
+        />
+        <section
+          className="headerText"
         >
-          Breathe
-        </button>
-      </Link>
-      <Link
-        to="/settings"
+          <h2>
+            mind
+          </h2>
+          <h3>
+            Drift
+          </h3>
+        </section>
+      </div>
+      <div
+        className="linksContainer"
       >
-        <button
-          className="setupButton"
+        <Link
+          to="/breathe"
         >
-          Setup
-        </button>
-      </Link>
+          <button
+            className="breatheButton"
+          >
+            Breathe
+          </button>
+        </Link>
+        <Link
+          to="/settings"
+        >
+          <button
+            className="setupButton"
+          >
+            Setup
+          </button>
+        </Link>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</Fragment>
 `;

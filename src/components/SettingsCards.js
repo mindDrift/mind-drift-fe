@@ -1,8 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './SettingsCards.css';
+import { useSpring, animated } from 'react-spring';
 
 const SettingsCards = ({ settingsList, handleSelectSettings, handleEdit, handleBreatheNow, selectedId }) => {
+  const props = useSpring({
+    opacity: 1,
+    from: { opacity: 0.1 },
+    config: { duration: 2000 },
+  });
+
   const settingsElements = settingsList.map(({
     _id,
     userId,
@@ -16,6 +23,8 @@ const SettingsCards = ({ settingsList, handleSelectSettings, handleEdit, handleB
   }) => {
     const editable = !userId.includes('__default__');
     const selected = selectedId === _id;
+
+
     return (
       <li
         className={`${styles.items} ${selected && styles.selected || ''}`}
@@ -37,14 +46,14 @@ const SettingsCards = ({ settingsList, handleSelectSettings, handleEdit, handleB
   });
 
   return (
-    <section className={styles.SettingsList}>
+    <animated.div style={props} className={styles.SettingsList}>
       <h2>Breathing Methods:</h2>
-      <h4>Pick a breathing method from the list below, or customize your own!</h4>
+      <h4>Pick a breathing method from the list below, or create your own by clicking the Add button.</h4>
       <ul className={styles.list}>
         {settingsElements}
       </ul>
       <button name='addButton' onClick={() => handleEdit('')}>+</button>
-    </section>
+    </animated.div>
   );
 };
 

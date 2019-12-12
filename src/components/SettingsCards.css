@@ -26,6 +26,9 @@
     color: var(--dark-blue);
     margin-bottom: 1.5em;
   }
+  button[name='addButton']:hover {
+    background-color: var(--light-blue);
+  }  
 }
 
 .items {

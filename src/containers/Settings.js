@@ -39,9 +39,7 @@ const Settings = ({ history }) => {
   return (
     <>
       <Loading loading={loading} />
-      <header>
-        <NavBar />
-      </header>
+      <NavBar />
       <SettingsCards 
         settingsList={settingsList} 
         handleSelectSettings={handleSelectSettings}

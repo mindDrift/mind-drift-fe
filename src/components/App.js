@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import { useAuth0 } from '../react-auth0-spa';
 import PrivateRoute from './PrivateRoute';
 import Home from './Home';
-import Profile from './Profile';
+import Profile from '../containers/Profile';
 import Session from '../containers/Session';
 import Settings from '../containers/Settings';
 import EditSettings from '../containers/EditSettings';

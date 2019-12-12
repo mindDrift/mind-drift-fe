@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth0 } from '../react-auth0-spa';
-import NavBar from './NavBar';
-import styles from './Profile.css';
-import Loading from './Loading';
-import Achievements from './Achievements';
+import Achievements from '../components/Achievements';
+import Loading from '../components/Loading';
+import NavBar from '../components/NavBar';
 import { fetchAchievements } from '../services/achievement';
+import styles from './Profile.css';
 
 const Profile = () => {
   const { user } = useAuth0();

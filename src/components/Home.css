@@ -71,11 +71,3 @@
     }
   }
 }
-
-.Toast {
-  position: absolute;
-  top: 0;
-  right: 0;
-  max-width: 70vw;
-  padding: 0.3em;
-}

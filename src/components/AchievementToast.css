@@ -1,0 +1,31 @@
+@import './vars.css';
+
+.Toast {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 70vw;
+  padding: 0.3em;
+  border-radius: 10px;
+
+  div { 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    img {
+      height: 3em;
+      margin-left: 0.3em;
+    }
+  
+    h3 {
+      font-family: Montserrat;
+      font-weight: 400;
+      font-size: 1em;
+      text-transform: uppercase;
+      color: var(--dark-blue);
+      margin: 0.5em;
+      margin-right: 0;
+    }
+  }
+}

@@ -21,7 +21,7 @@ const Home = () => {
               <button className={styles.breatheButton}>Breathe</button>
             </Link>
             <Link to="/settings">
-              <button className={styles.setupButton}>Setup</button>
+              <button className={styles.setupButton}>Set up</button>
             </Link>
           </div>
         </div>

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import styles from './Aggs.css';
 import blueicon from '../assets/blueicon.png';
 import greenicon from '../assets/greenicon.png';
-import peachicon from '../assets/peachicon.png';
 
 const Aggs = ({ average, total, streak }) => {
   return (

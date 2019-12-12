@@ -42,6 +42,12 @@
     bottom: 0;
   }
 }
+p[name='count-down'] {
+  position: absolute;
+  z-index: 2;
+  color: white;
+  margin-top: 2.6em;
+}
 
 .Animate {
   margin-top: 4em;

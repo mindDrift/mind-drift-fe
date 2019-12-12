@@ -27,13 +27,17 @@ exports[`App component renders App 1`] = `
         component={[Function]}
         path="/edit-settings"
       />
+      <PrivateRoute
+        component={[Function]}
+        path="/about-us"
+      />
     </Switch>
   </BrowserRouter>
 </div>
 `;
 
 exports[`App component renders App in Loading state 1`] = `
-<div>
-  loading ...
-</div>
+<Loading
+  loading={true}
+/>
 `;

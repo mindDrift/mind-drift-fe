@@ -7,30 +7,23 @@ jest.mock('../react-auth0-spa', () => ({}));
 
 describe('Profile component', () => {
 
-  it('renders the profile in a loading state', () => {
-    useAuth0Mock.useAuth0 = () => ({
-      loading: true,
-    });
-    const wrapper = shallow(<Profile />);
-    expect(wrapper).toMatchSnapshot();
-
-    useAuth0Mock.useAuth0 = () => ({
-      loading: false,
-      user: null,
-    });
-    const wrapper2 = shallow(<Profile />);
-    expect(wrapper2).toMatchSnapshot();
-  });
-
   it('renders the profile', () => {
     useAuth0Mock.useAuth0 = () => ({
-      loading: false,
       user: {
         name: 'me',
-        email: 'me@me.com'
+        email: 'me@me.com',
+        picture: 'http://domain.com/pictures/0000.png',
       }
     });
     const wrapper = shallow(<Profile />);
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('renders the profile in a loading state', () => {
+    useAuth0Mock.useAuth0 = () => ({
+      user: null,
+    });
+    const wrapper2 = shallow(<Profile />);
+    expect(wrapper2).toMatchSnapshot();
   });
 });

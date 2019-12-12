@@ -29,6 +29,7 @@
     "@auth0/auth0-spa-js": "^1.6.0",
     "@babel/polyfill": "^7.7.0",
     "bootstrap": "^4.4.1",
+    "copy-webpack-plugin": "^5.1.1",
     "promise-middleware-redux": "^1.2.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-redux": "^7.1.3",

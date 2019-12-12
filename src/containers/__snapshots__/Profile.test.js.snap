@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile component renders the profile 1`] = `
+<Fragment>
+  <Loading
+    loading={false}
+  />
+  <NavBar />
+  <section>
+    <User
+      picture="http://domain.com/pictures/0000.png"
+      userName="me"
+    />
+    <div>
+      <Aggs
+        average={Object {}}
+        streak={0}
+        total={Object {}}
+      />
+      <Achievements
+        achieves={Array []}
+      />
+    </div>
+  </section>
+</Fragment>
+`;
+
+exports[`Profile component renders the profile in a loading state 1`] = `
+<Fragment>
+  <Loading
+    loading={true}
+  />
+  <NavBar />
+</Fragment>
+`;

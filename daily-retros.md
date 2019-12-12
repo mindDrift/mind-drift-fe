@@ -62,3 +62,22 @@
   * Dave fully understands redux!
 — What Didn't Go So Well: 
   * Put route took a while, despite also testing all the other routes along the way.
+
+## 12/11/2019
+- What went well
+  - Icons look great!
+  - User Experience fixes
+  - The way we used the morning time to split our time and tackle many low hanging issues
+  - Mobbing is a good way to get hyped about the project (Mid week afternoon lull)
+  - Vertical slice for achievements, that also required a new model for Users - we got the help we needed in a timely fashion
+- What Didn't go so well
+  - mid week afternoon lull
+  - no testing, even though we had planned on it
+- priorities for tomorrow
+  1. Testing
+  2. 
+- Tech Talk Ideas
+  - animation by Maeve - react spring, etc...
+  - after the post route, chaining additional actions on that fed information into other Models (cross routes)
+  - Auth0 ???
+  - Settings - new vs edit (post vs. Put) ... and redux used judiciously

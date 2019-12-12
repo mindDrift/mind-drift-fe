@@ -1,51 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Home component renders the Home component 1`] = `
-<section
-  className="Home"
->
-  <header>
-    <NavBar />
-  </header>
-  <div
-    className="breatheContainer"
+<Fragment>
+  <section
+    className="Home"
   >
+    <NavBar />
+    <AchievementToast />
     <div
-      className="logo"
+      className="homeContainer"
     >
-      <img
-        alt="mindDrift logo"
-        src="/src/assets/mindDriftIcon.png"
-      />
-      <section
-        className="headerText"
+      <div
+        className="logo"
       >
-        <h2>
-          mind
-        </h2>
-        <h3>
-          Drift
-        </h3>
-      </section>
+        <img
+          alt="mindDrift logo"
+          src="test-file-stub"
+        />
+        <section
+          className="headerText"
+        >
+          <h2>
+            mind
+          </h2>
+          <h3>
+            Drift
+          </h3>
+        </section>
+      </div>
+      <div
+        className="linksContainer"
+      >
+        <Link
+          to="/breathe"
+        >
+          <button
+            className="breatheButton"
+          >
+            Breathe
+          </button>
+        </Link>
+        <Link
+          to="/settings"
+        >
+          <button
+            className="setupButton"
+          >
+            Setup
+          </button>
+        </Link>
+      </div>
     </div>
-    <Link
-      to="/breathe"
-    >
-      <button
-        className="breatheButton"
-      >
-        Breathe
-      </button>
-    </Link>
-    <Link
-      to="/settings"
-    >
-      <button
-        className="setupButton"
-      >
-        Setup
-      </button>
-    </Link>
-  </div>
-</section>
+  </section>
+</Fragment>
 `;

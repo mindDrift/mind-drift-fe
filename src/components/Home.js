@@ -2,16 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
 import styles from './Home.css';
+import AchievementToast from './AchievementToast';
+import mindDriftIcon from '../assets/mindDriftIcon.png';
 
-const Home = () => {
-  return (
+const Home = () => (
+  <>
     <section className={styles.Home}>
-      <header>
-        <NavBar />
-      </header>
-      <div className={styles.breatheContainer}>
+      <NavBar />
+      <AchievementToast />
+      <div className={styles.homeContainer}>
         <div className={styles.logo}>
-          <img src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/mindDriftIcon.png" alt="mindDrift logo" />
+          <img src={mindDriftIcon} alt="mindDrift logo" />
           <section className={styles.headerText}>
             <h2>mind</h2>
             <h3>Drift</h3>
@@ -27,7 +28,7 @@ const Home = () => {
         </div>
       </div>
     </section>
-  );
-};
+  </>
+);
 
 export default Home;

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './SettingsCards.css';
 import arrowIcon from '../assets/arrowicon_green.png';
+import editIcon from '../assets/editICON.png';
 import { useSpring, animated } from 'react-spring';
 
 const SettingsCards = ({ settingsList, handleSelectSettings, handleEdit, handleBreatheNow, selectedId }) => {
@@ -31,7 +32,11 @@ const SettingsCards = ({ settingsList, handleSelectSettings, handleEdit, handleB
         key={_id}
         onClick={() => handleSelectSettings(_id)}
       >
-        {selected && editable && <button name='editButton' onClick={() => handleEdit(_id)}><img src='https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/editICON.png' alt='edit'/></button>}
+        {selected && editable && 
+          <button name='editButton' onClick={() => handleEdit(_id)}>
+            <img src={editIcon} alt='edit'/>
+          </button>
+        }
         <h3>{title}</h3>
         <p>{description}</p>
         <div name='breathingSettingsContainer'>
@@ -73,7 +78,7 @@ const SettingsCards = ({ settingsList, handleSelectSettings, handleEdit, handleB
 
   return (
     <animated.div style={props} className={styles.SettingsList}>
-      <h2>Breathing Methods:</h2>
+      <h2>Breathing Methods</h2>
       <h4>Pick a breathing method from the list below, or create your own by clicking the Add button.</h4>
       <ul className={styles.list}>
         {settingsElements}

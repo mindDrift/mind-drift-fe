@@ -6,6 +6,7 @@ exports[`Home component renders the Home component 1`] = `
     className="Home"
   >
     <NavBar />
+    <AchievementToast />
     <div
       className="homeContainer"
     >

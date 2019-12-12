@@ -5,9 +5,9 @@ import Loading from '../components/Loading';
 import NavBar from '../components/NavBar';
 import Aggs from '../components/Aggs';
 import { fetchAchievements } from '../services/achievement';
-import styles from './Profile.css';
 import { getAverage, getTotal } from '../services/session';
 import { fetchUser } from '../services/user';
+import User from '../components/User';
 
 const Profile = () => {
   const { user } = useAuth0();
@@ -36,19 +36,14 @@ const Profile = () => {
       });
     return;
   }, []);
-
-  useEffect(() => {
-    console.log(total, average, streak);
-  }, [total, average, streak]);
   
   return (
     <>
       <Loading loading={loading} />
       <NavBar />
       {!loading &&
-        <section className={styles.ProfileArea}>
-          <img src={user.picture} alt="Profile" />
-          <h2>Hello, {user.name}</h2>
+        <section>
+          <User picture={user.picture} userName={user.name} />
           <div>
             <Aggs average={average} total={total} streak={streak}/>
             <Achievements achieves={achieves} />

@@ -6,7 +6,7 @@
     width: 85vw;
     margin: auto;
 
-    border: solid var(--light-grey) .2em;
+    border: solid var(--light-green) .2em;
     border-radius: .2em;
     h3 {
       text-align: center;
@@ -19,9 +19,10 @@
     }
     p {
       font-family: Montserrat;
-      font-weight: 200;
+      font-weight: 400;
       line-height: normal;
       font-size: .7em;
+      color: var(--dark-blue);
     }
   }
 }

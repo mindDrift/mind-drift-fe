@@ -1,3 +1,4 @@
+
 .NavBar {
   margin-top: 2em;
   
@@ -13,9 +14,10 @@
     height: 2.3em;
     background-color: white;
     font-family: Montserrat;
-    font-weight: 200;
+    font-weight: 400;
     font-size: 12px;
     margin-left: 1.5em;
+    color: var(--dark-blue);
   }
   button:hover {
     background-color: var(--light-blue);

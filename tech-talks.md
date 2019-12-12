@@ -1,0 +1,7 @@
+- Original plan was to avoid Redux as much as possible and use custom hooks
+- We got into a situation where that became impossible 
+  - settings is a page from home, and we wanted to have the user's choice from the settings page to be used by the Breathe component, which is a separate page below home. Prop drilling was a no-go. 
+  - Enter Redux
+    - what is the difference between code with react custom hooks and Redux?
+    - Is there a good way to combine custom hooks and Redux code?
+    - 

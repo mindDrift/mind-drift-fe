@@ -22,6 +22,14 @@ exports[`Nav Bar component renders Nav Bar 1`] = `
     </Link>
      
     <Link
+      to="/profile"
+    >
+      <img
+        alt="Profile"
+        src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/PROFILEicon.png"
+      />
+    </Link>
+    <Link
       to="/settings"
     >
       <img
@@ -30,11 +38,11 @@ exports[`Nav Bar component renders Nav Bar 1`] = `
       />
     </Link>
     <Link
-      to="/profile"
+      to="/about-us"
     >
       <img
-        alt="Profile"
-        src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/PROFILEicon.png"
+        alt="About Us"
+        src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/FLOWERicon.png"
       />
     </Link>
   </span>

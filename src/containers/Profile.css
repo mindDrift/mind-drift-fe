@@ -2,6 +2,7 @@
   margin: 2em;
   overflow: auto; 
   height: 100%; 
+  margin-bottom: 4em;
 
   img {
     width: 100px;
@@ -13,14 +14,15 @@
 
   h2 {
     font-family: Montserrat;
-    font-weight: 700;
+    font-weight: 400;
+    font-size: 1.5em;
     text-transform: uppercase;
     margin-bottom: 1em;
-    color: var(--rust);
+    color: var(--dark-blue);
   }
   h3 {
     font-family: Montserrat;
-    font-size: 14px;
+    font-size: 1.2em;
     font-weight: 400;
     line-height: normal;
     color: var(--rust);
@@ -29,7 +31,7 @@
     font-family: Montserrat;
     font-weight: 200;
     line-height: normal;
-    font-size: 14px;
+    font-size: 1em;
     margin-bottom: 0.5em;
   }
 }

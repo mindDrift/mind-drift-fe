@@ -14,22 +14,14 @@ exports[`Profile component renders the profile 1`] = `
       src="http://domain.com/pictures/0000.png"
     />
     <h2>
-      Your Profile:
-    </h2>
-    <h3>
-      Username:
-    </h3>
-    <p>
-       
+      Hello, 
       me
-    </p>
-    <h3>
-      Email:
-    </h3>
-    <p>
-       
-      me@me.com
-    </p>
+    </h2>
+    <div>
+      <Achievements
+        achieves={Array []}
+      />
+    </div>
   </section>
 </Fragment>
 `;

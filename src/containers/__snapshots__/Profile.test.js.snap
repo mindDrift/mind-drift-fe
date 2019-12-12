@@ -6,18 +6,17 @@ exports[`Profile component renders the profile 1`] = `
     loading={false}
   />
   <NavBar />
-  <section
-    className="ProfileArea"
-  >
-    <img
-      alt="Profile"
-      src="http://domain.com/pictures/0000.png"
+  <section>
+    <User
+      picture="http://domain.com/pictures/0000.png"
+      userName="me"
     />
-    <h2>
-      Hello, 
-      me
-    </h2>
     <div>
+      <Aggs
+        average={Object {}}
+        streak={0}
+        total={Object {}}
+      />
       <Achievements
         achieves={Array []}
       />

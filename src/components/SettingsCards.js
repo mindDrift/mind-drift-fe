@@ -2,17 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './SettingsCards.css';
 import arrowIcon from '../assets/arrowicon_green.png';
+import { useSpring, animated } from 'react-spring';
 
 const SettingsCards = ({ settingsList, handleSelectSettings, handleEdit, handleBreatheNow, selectedId }) => {
-  const settingsElements = settingsList.map(({ 
-    _id, 
+  const props = useSpring({
+    opacity: 1,
+    from: { opacity: 0.1 },
+    config: { duration: 1000 },
+  });
+
+  const settingsElements = settingsList.map(({
+    _id,
     userId,
-    title, 
-    description, 
-    inhale, 
-    holdIn, 
-    exhale, 
-    holdOut, 
+    title,
+    description,
+    inhale,
+    holdIn,
+    exhale,
+    holdOut,
     endTime
   }) => {
     const editable = !userId.includes('__default__');
@@ -65,13 +72,14 @@ const SettingsCards = ({ settingsList, handleSelectSettings, handleEdit, handleB
   });
 
   return (
-    <section className={styles.SettingsList}>
-      <h2>Pick Your Breathing Method:</h2>
+    <animated.div style={props} className={styles.SettingsList}>
+      <h2>Breathing Methods:</h2>
+      <h4>Pick a breathing method from the list below, or create your own by clicking the Add button.</h4>
       <ul className={styles.list}>
         {settingsElements}
       </ul>
       <button name='addButton' onClick={() => handleEdit('')}>+</button>
-    </section>
+    </animated.div>
   );
 };
 

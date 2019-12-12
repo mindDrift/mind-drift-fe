@@ -6,7 +6,7 @@ const Achievements = ({ achieves }) => {
     return (
       <li key={achievement._id}>
         <img src={achievement.img} />
-        <h2>{achievement.title}</h2>
+        <h3>{achievement.name}</h3>
         <p>{achievement.description}</p>
       </li>
     );

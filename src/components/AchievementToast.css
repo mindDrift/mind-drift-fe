@@ -7,11 +7,13 @@
   max-width: 70vw;
   padding: 0.3em;
   border-radius: 10px;
+  cursor: pointer;
 
   div { 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    cursor: pointer;
 
     img {
       height: 3em;
@@ -26,6 +28,7 @@
       color: var(--dark-blue);
       margin: 0.5em;
       margin-right: 0;
+      cursor: pointer;
     }
   }
 }

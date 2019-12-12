@@ -13,6 +13,7 @@ const AboutUs = () => {
 
   return (
     <>
+      <NavBar />
       <animated.div
         className={styles.logo}
         style={props}>
@@ -29,7 +30,7 @@ const AboutUs = () => {
         <div>
           <img src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/DAVE.png" alt="Dave Trost" />
           <h2>Dave Trost</h2>
-          <p>Abbey is a Full-Stack developer, and enjoys long walks at the park with her dog. And also chocolate chip cookies!</p>
+          <p>Dave is a Back-End developer who is surprised by how much he likes React and Redux. He is a big nerd for disc golf, and lots of other things too. Lots of GF chocolate chip cookies!</p>
         </div>
         <div>
           <img src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/MAEVE.jpg" alt="Maeve Griffin" />
@@ -37,7 +38,6 @@ const AboutUs = () => {
           <p>Abbey is a Full-Stack developer, and enjoys long walks at the park with her dog. And also chocolate chip cookies!</p>
         </div>
       </section>
-      <NavBar />
     </>
   );
 };

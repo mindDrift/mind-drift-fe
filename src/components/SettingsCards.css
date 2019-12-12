@@ -63,16 +63,29 @@
     line-height: normal;
   }
 
+  div[name='breathingSettingsContainer'] {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+  }
+  div[name='breathingSettingsFlex'] {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  
+    ul {
+      display: inline-block;
+      margin-right: 0.4em;
+      margin-left: 0.4em;
+    }
+  }
+
   li {
     font-family: Montserrat;
     font-weight: 400;
     font-size: 12px;
     color: var(--dark-blue);
     line-height: normal;
-  }
-  ul {
-    margin-top: 0.5em;
-    margin-bottom:0.5em;
   }
 
   button[name='breatheButton'] {
@@ -98,15 +111,16 @@
     position: absolute;
     top: 2%;
     right: 2%;
+
+    img {
+      width: 1.5em;
+      height: 1.5em;
+      position: absolute;
+      top: 2%;
+      right: 2%;
+    }
   }
 
-  img {
-    width: 1.5em;
-    height: 1.5em;
-    position: absolute;
-    top: 2%;
-    right: 2%;
-  }
   
   &.selected {
     border: none;

@@ -17,29 +17,28 @@
   p {
     display: flex; 
     font-family: Montserrat;
-    font-weight: 200;
+    font-weight: 400;
     line-height: normal;
     font-size: 1em;
     margin: 0;
     margin-left: 2em;
+    color: var(--dark-blue);
   }
   h1{
     color: var(--rust);
     font-weight: 1000;
     font-size: .7em;
-    margin: .3em
+
   }
   h2{
     color: var(--rust);
     font-weight: 1000;
-    font-size: .7em;
-    margin: .3em;
-    margin-bottom: .6em;
+    font-size: .8em;
   }
   img {
     position: relative;
     z-index: -1;
-    top: -3.5em;
+    top: -3.9em;
   }
   
   .badge {

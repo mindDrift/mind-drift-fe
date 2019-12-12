@@ -26,9 +26,10 @@
     justify-content: center;
     h2 {
       font-family: Montserrat;
-      font-weight: 200;
+      font-weight: 400;
       font-size: 1.5em;
       line-height: 1.5em;
+      color: var(--dark-blue);
     }
     h3 {
       font-family: Damion;
@@ -45,6 +46,7 @@
     text-decoration: none;
     a {
       text-decoration: none;
+      color: var(--dark-blue);
     }
   }
 
@@ -57,9 +59,9 @@
     height: 3em;
     margin: auto;
     margin-top: 1em;
-    color: black;
+    color: var(--dark-blue);
     font-family: Montserrat;
-    font-weight: 200;
+    font-weight: 400;
     font-size: 14px;
   
     &:hover {

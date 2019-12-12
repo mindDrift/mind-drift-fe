@@ -3,7 +3,7 @@
 .Aggs {
   display: flex;
   flex-direction: column;
-  height: 40vh;
+
   h3 {
     text-align: center;
     font-family: Montserrat;

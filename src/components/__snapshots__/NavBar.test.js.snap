@@ -4,9 +4,7 @@ exports[`Nav Bar component renders Nav Bar 1`] = `
 <div
   className="NavBar"
 >
-  <button
-    onClick={[Function]}
-  >
+  <button>
     Log Out
   </button>
   <span

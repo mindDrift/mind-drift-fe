@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Aggregations component renders User Stats from Aggregation data 1`] = `
+<div
+  className="Aggs"
+>
+  <h3>
+    Your Stats:
+  </h3>
+  <section
+    className="individualBadges"
+  >
+    <div
+      className="badge"
+    >
+      <h2>
+        1.4
+      </h2>
+      <h1>
+        minutes
+      </h1>
+      <img
+        src="test-file-stub"
+      />
+    </div>
+    <p>
+      Average Session
+    </p>
+  </section>
+  <section
+    className="individualBadges"
+  >
+    <div
+      className="badge"
+    >
+      <h2>
+        2.5
+      </h2>
+      <h1>
+        hours
+      </h1>
+      <img
+        src="test-file-stub"
+      />
+    </div>
+    <p>
+      Total Time Breathing
+    </p>
+  </section>
+  <section
+    className="individualBadges"
+  >
+    <div
+      className="badge"
+    >
+      <h2>
+        5
+      </h2>
+      <h1>
+        days
+      </h1>
+      <img
+        src="test-file-stub"
+      />
+    </div>
+    <p>
+      Current Streak
+    </p>
+  </section>
+</div>
+`;

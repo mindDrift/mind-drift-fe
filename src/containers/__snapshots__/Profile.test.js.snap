@@ -8,7 +8,7 @@ exports[`Profile component renders the profile 1`] = `
   <NavBar />
   <section>
     <User
-      picture="http://domain.com/pictures/0000.png"
+      image="image_url"
       userName="me"
     />
     <div>
@@ -22,14 +22,5 @@ exports[`Profile component renders the profile 1`] = `
       />
     </div>
   </section>
-</Fragment>
-`;
-
-exports[`Profile component renders the profile in a loading state 1`] = `
-<Fragment>
-  <Loading
-    loading={true}
-  />
-  <NavBar />
 </Fragment>
 `;

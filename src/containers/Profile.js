@@ -43,7 +43,7 @@ const Profile = () => {
       <NavBar />
       {!loading &&
         <section>
-          <User picture={user.picture} userName={user.name} />
+          <User image={user.photoURL} userName={user.displayName} />
           <div>
             <Aggs average={average} total={total} streak={streak}/>
             <Achievements achieves={achieves} />

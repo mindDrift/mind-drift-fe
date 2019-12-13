@@ -5,6 +5,9 @@ import { StyledFirebaseAuth } from 'react-firebaseui';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import Loading from '../components/Loading';
+import logo from '../assets/mindDriftIcon.png';
+import styles from './WithSession.css';
+
 
 const AuthorizeContext = createContext();
 
@@ -46,7 +49,7 @@ export const AuthProvider = ({ children }) => {
         setIsAuthenticated(false);
       }
       setLoading(false);
-    }); 
+    });
   });
 
   return (
@@ -65,14 +68,22 @@ export const useSession = () => {
   return useContext(AuthorizeContext);
 };
 
+
 export const withSession = Comp => {
+  
   return function WithSession(props) {
     const { loading, isAuthenticated } = useSession();
     if(loading) return <Loading loading={loading} />;
     if(!loading && !isAuthenticated) {
       return (
         <>
-          <p>Hellow world</p>
+          <section className={styles.WithSession}>
+            <img src={logo} alt="mindDrift logo" />
+            <section className={styles.headerText}>
+              <h2>mind</h2>
+              <h3>Drift</h3>
+            </section>
+          </section>
           <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
         </>
       );

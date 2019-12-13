@@ -3,6 +3,7 @@
   .homeContainer {
     text-align: center;
     margin: 0;
+    margin-top: 15%;
   }
 
   .logo {
@@ -11,12 +12,20 @@
     max-width: 420px;
     margin: auto;
     margin-bottom: 10%;
-    margin-top: 10%;
     img {
       margin: 0;
-      max-width: 12vw;
-      width: 65%;
+      width: 50%;
       height: auto;
+    }
+    @media screen and (min-width: 425px) {
+      img {
+        width: 35%;
+      }
+    }
+    @media screen and (min-width: 1440) {
+      img {
+        width: 30%;
+      }
     }
   }
 
@@ -26,9 +35,9 @@
     justify-content: center;
     h2 {
       font-family: Montserrat;
-      font-weight: 400;
+      font-weight: 200;
       font-size: 1.5em;
-      line-height: 1.5em;
+      line-height: 1.6em;
       color: var(--dark-blue);
     }
     h3 {

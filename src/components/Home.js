@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavBar from './NavBar';
 import styles from './Home.css';
+import NavBar from './NavBar';
 import AchievementToast from './AchievementToast';
 import mindDriftIcon from '../assets/mindDriftIcon.png';
 
 const Home = () => (
+  
   <>
     <section className={styles.Home}>
       <NavBar />

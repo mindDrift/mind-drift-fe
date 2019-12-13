@@ -1,29 +1,36 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Profile from './Profile';
-import useAuth0Mock from '../react-auth0-spa';
 
-jest.mock('../react-auth0-spa', () => ({}));
+import withSessionMock from '../utils/WithSession';
+jest.mock('../utils/WithSession', () => ({}));
+
+import achievementServicesMock from '../services/achievement';
+jest.mock('../services/achievement', () => ({}));
+
+import sessionServicesMock from '../services/session';
+jest.mock('../services/session', () => ({}));
+
+import userServicesMock from '../services/user';
+jest.mock('../services/user', () => ({}));
 
 describe('Profile component', () => {
-
-  it('renders the profile', () => {
-    useAuth0Mock.useAuth0 = () => ({
-      user: {
-        name: 'me',
-        email: 'me@me.com',
-        picture: 'http://domain.com/pictures/0000.png',
-      }
-    });
-    const wrapper = shallow(<Profile />);
-    expect(wrapper).toMatchSnapshot();
+  withSessionMock.useSession = () => ({
+    user: {
+      displayName: 'me',
+      photoURL: 'image_url',
+    }
   });
 
-  it('renders the profile in a loading state', () => {
-    useAuth0Mock.useAuth0 = () => ({
-      user: null,
-    });
-    const wrapper2 = shallow(<Profile />);
-    expect(wrapper2).toMatchSnapshot();
+  achievementServicesMock.fetchAchievements = () => ([]);
+
+  sessionServicesMock.getAverage = () => [60];
+  sessionServicesMock.getTotal = () => [12345];
+
+  userServicesMock.fetchUser = () => [{ currentStreak: 5 }];
+
+  it('renders the profile', () => {
+    const wrapper = shallow(<Profile />);
+    expect(wrapper).toMatchSnapshot();
   });
 });

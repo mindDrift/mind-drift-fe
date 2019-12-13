@@ -1,17 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import NavBar from './NavBar';
-import useAuth0Mock from '../react-auth0-spa';
 
-jest.mock('../react-auth0-spa', () => ({}));
+import useLogoutMock from '../utils/WithSession';
+jest.mock('../utils/WithSession', () => ({}));
 
 describe('Nav Bar component', () => {
   it('renders Nav Bar', () => {
-    useAuth0Mock.useAuth0 = () => ({
-      isAuthenticated: true,
-      loginWithRedirect: () => true,
-      logout: () => false,
-    });
+    useLogoutMock.useLogout = () => {};
     const wrapper = shallow(<NavBar />);
     expect(wrapper).toMatchSnapshot();
   });

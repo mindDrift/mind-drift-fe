@@ -77,6 +77,10 @@ export const withSession = Comp => {
         <>
           <section className={styles.WithSession}>
             <img src={logo} alt="mindDrift logo" />
+            <section className={styles.headerText}>
+              <h2>mind</h2>
+              <h3>Drift</h3>
+            </section>
           </section>
           <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
         </>

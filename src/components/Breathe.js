@@ -6,6 +6,7 @@ import styles from './Breathe.css';
 import { getCurrentSettings } from '../selectors/settingsSelectors';
 import WrapUp from './WrapUp';
 import Progress from './Progress';
+import closeX from '../assets/closeX.png';
 
 const Breathe = ({ handleEndSession }) => {
   const { inhale, holdIn, exhale, holdOut, endTime } = useSelector(state => getCurrentSettings(state));
@@ -51,8 +52,8 @@ const Breathe = ({ handleEndSession }) => {
   return (
     <div className={styles.Breathe}>
       {!endSession && 
-        <div onClick={() => handleEndSession(time)} name='close' className='close' aria-label='Close'>
-          <span aria-hidden='true'>&times;</span>
+        <div onClick={() => handleEndSession(time)} name='close'>
+          <img src={closeX} />
         </div>
       }
       <p>{actionArr[index]}</p>

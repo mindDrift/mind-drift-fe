@@ -1,25 +1,28 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import { useHistory } from 'react-router-dom';
 import Toast from 'react-bootstrap/Toast';
 import styles from './AchievementToast.css';
 import { fetchNewAchievements } from '../services/achievement';
 import { useSession } from '../utils/WithSession';
 
-const AchievementToast = ({ history }) => {
-  const { user } = useSession();
+const AchievementToast = () => {
   const [show, setShow] = useState(false);
   const [badge, setBadge] = useState(null);
-
-  const gotoSettings = () => history.push('/settings');
+  
+  const { user } = useSession();
+  const history = useHistory();
+  const gotoSettings = () => history.push('/profile');
 
   useEffect(() => {
-    fetchNewAchievements(user.uid)
-      .then(newAchieves => {
-        if(newAchieves.length) {
-          setShow(true);
-          setBadge(newAchieves[0].img);
-        }
-      });
+    if(user) {
+      fetchNewAchievements(user.uid)
+        .then(newAchieves => {
+          if(newAchieves.length) {
+            setShow(true);
+            setBadge(newAchieves[0].img);
+          }
+        });
+    }
   });
 
   return (
@@ -27,7 +30,7 @@ const AchievementToast = ({ history }) => {
       onClose={() => setShow(false)} 
       onClick={gotoSettings}
       show={show} 
-      delay={2500}
+      delay={3000}
       autohide
       className={styles.Toast}
     >
@@ -37,12 +40,6 @@ const AchievementToast = ({ history }) => {
       </div>
     </Toast>
   );
-};
-
-AchievementToast.propTypes = {
-  history: PropTypes.shape({
-    push: PropTypes.func.isRequired
-  })
 };
 
 export default AchievementToast;

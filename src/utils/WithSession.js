@@ -39,11 +39,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     return firebase.auth().onAuthStateChanged(user => {
       if(user) {
-        // user.getIdToken()
-        //   .then(token => {
-        //     setToken(token);
-        //     setIsAuthenticated(true);
-        //   });
+        setIsAuthenticated(true);
         setUser(user);
       }
       else {
@@ -74,7 +70,12 @@ export const withSession = Comp => {
     const { loading, isAuthenticated } = useSession();
     if(loading) return <Loading loading={loading} />;
     if(!loading && !isAuthenticated) {
-      return <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />;
+      return (
+        <>
+          <p>Hellow world</p>
+          <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
+        </>
+      );
     }
     return <Comp {...props} />;
   };

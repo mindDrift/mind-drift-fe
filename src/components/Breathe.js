@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import PropTypes from 'prop-types';
 import { useSpring, animated } from 'react-spring';
-import styles from './Breathe.css';
+import PropTypes from 'prop-types';
 import { getCurrentSettings } from '../selectors/settingsSelectors';
 import WrapUp from './WrapUp';
 import Progress from './Progress';
+import styles from './Breathe.css';
 import closeX from '../assets/closeX.png';
 
 const Breathe = ({ handleEndSession }) => {

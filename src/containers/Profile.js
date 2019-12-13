@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth0 } from '../react-auth0-spa';
 import Achievements from '../components/Achievements';
 import Loading from '../components/Loading';
 import NavBar from '../components/NavBar';
@@ -8,28 +7,29 @@ import { fetchAchievements } from '../services/achievement';
 import { getAverage, getTotal } from '../services/session';
 import { fetchUser } from '../services/user';
 import User from '../components/User';
+import { useSession } from '../utils/WithSession';
 
 const Profile = () => {
-  const { user } = useAuth0();
+  const { user } = useSession();
   const [achieves, setAchieves] = useState([]);
   const [total, setTotal] = useState({});
   const [average, setAverage] = useState({});
   const [streak, setStreak] = useState(0);
   const loading = !user;
   useEffect(() => {
-    fetchAchievements(user.sub)
+    fetchAchievements(user.uid)
       .then(list => setAchieves(list));
 
-    fetchUser(user.sub)
+    fetchUser(user.uid)
       .then(([user]) => setStreak(user.currentStreak));
 
-    getTotal(user.sub)
+    getTotal(user.uid)
       .then(([total]) => {
         const rounded = makeTimer(total.totalTime);
         setTotal(rounded);
       });
 
-    getAverage(user.sub)
+    getAverage(user.uid)
       .then(([average]) => {
         const rounded = makeTimer(average.averageTime);
         setAverage(rounded);

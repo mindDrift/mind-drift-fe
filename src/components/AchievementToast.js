@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 import Toast from 'react-bootstrap/Toast';
 import styles from './AchievementToast.css';
 import { fetchNewAchievements } from '../services/achievement';
-import { useAuth0 } from '../react-auth0-spa';
+import { useSession } from '../utils/WithSession';
 
 const AchievementToast = ({ history }) => {
-  const { user } = useAuth0();
+  const { user } = useSession();
   const [show, setShow] = useState(false);
   const [badge, setBadge] = useState(null);
 
   const gotoSettings = () => history.push('/settings');
 
   useEffect(() => {
-    fetchNewAchievements(user.sub)
+    fetchNewAchievements(user.uid)
       .then(newAchieves => {
         if(newAchieves.length) {
           setShow(true);

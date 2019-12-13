@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import Breathe from '../components/Breathe';
-import { useAuth0 } from '../react-auth0-spa';
 import { postSession } from '../services/session';
+import { useSession } from '../utils/WithSession';
 
 const Session = ({ history }) => {
-  const { user } = useAuth0();
+  const { user } = useSession();
   const [startTime] = useState(new Date());
 
   const settings = {
@@ -17,7 +17,7 @@ const Session = ({ history }) => {
     endTime: 180
   };
   const handleEndSession = duration => {
-    postSession(startTime, duration, user.sub, settings);
+    postSession(startTime, duration, user.uid, settings);
     history.push('/');
   };
 

@@ -1,0 +1,10 @@
+.WithSession {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30%;
+  img {
+    width: 100px;
+    height: auto;
+  }
+}

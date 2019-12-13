@@ -1,29 +1,19 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Profile from './Profile';
-import useAuth0Mock from '../react-auth0-spa';
 
-jest.mock('../react-auth0-spa', () => ({}));
+import withSessionMock from '../utils/WithSession';
+jest.mock('../utils/WithSession', () => ({}));
 
 describe('Profile component', () => {
-
   it('renders the profile', () => {
-    useAuth0Mock.useAuth0 = () => ({
+    withSessionMock.useSession = () => ({
       user: {
-        name: 'me',
-        email: 'me@me.com',
-        picture: 'http://domain.com/pictures/0000.png',
+        displayName: 'me',
+        photoURL: 'image_url',
       }
     });
     const wrapper = shallow(<Profile />);
     expect(wrapper).toMatchSnapshot();
-  });
-
-  it('renders the profile in a loading state', () => {
-    useAuth0Mock.useAuth0 = () => ({
-      user: null,
-    });
-    const wrapper2 = shallow(<Profile />);
-    expect(wrapper2).toMatchSnapshot();
   });
 });

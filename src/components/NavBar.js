@@ -7,7 +7,6 @@ import SETTINGSicon from '../assets/SETTINGSicon.png';
 import FLOWERicon from '../assets/FLOWERicon.png';
 import { useLogout } from '../utils/WithSession';
 
-
 const NavBar = () => {
   const logout = useLogout();
 

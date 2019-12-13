@@ -2,22 +2,20 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
 
-import useAuth0Mock from '../react-auth0-spa';
-jest.mock('../react-auth0-spa', () => ({}));
+import withSessionMock from '../utils/WithSession';
+jest.mock('../utils/WithSession', () => ({}));
 
 describe('App component', () => {
-  it('renders App in Loading state', () => {
-    useAuth0Mock.useAuth0 = () => ({
-      loading: true
-    });
+  it('renders App in logged-in state', () => {
+    withSessionMock.withSession = Comp => (<Comp />);
+    
     const wrapper = shallow(<App />);
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('renders App', () => {
-    useAuth0Mock.useAuth0 = () => ({
-      loading: false
-    });
+  it('renders App when not logged in', () => {
+    withSessionMock.withSession = Comp => (<></>);
+
     const wrapper = shallow(<App />);
     expect(wrapper).toMatchSnapshot();
   });

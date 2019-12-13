@@ -1,34 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App component renders App 1`] = `
+exports[`App component renders App in logged-in state 1`] = `
 <div
   className="container"
 >
   <BrowserRouter>
     <Switch>
-      <PrivateRoute
-        component={[Function]}
+      <Route
+        component={<Home />}
         exact={true}
         path="/"
       />
-      <PrivateRoute
-        component={[Function]}
+      <Route
+        component={<Profile />}
         path="/profile"
       />
-      <PrivateRoute
-        component={[Function]}
+      <Route
+        component={<withRouter(Session) />}
         path="/breathe"
       />
-      <PrivateRoute
-        component={[Function]}
+      <Route
+        component={<Settings />}
         path="/settings"
       />
-      <PrivateRoute
-        component={[Function]}
+      <Route
+        component={<EditSettings />}
         path="/edit-settings"
       />
-      <PrivateRoute
-        component={[Function]}
+      <Route
+        component={<AboutUs />}
         path="/about-us"
       />
     </Switch>
@@ -36,8 +36,38 @@ exports[`App component renders App 1`] = `
 </div>
 `;
 
-exports[`App component renders App in Loading state 1`] = `
-<Loading
-  loading={true}
-/>
+exports[`App component renders App when not logged in 1`] = `
+<div
+  className="container"
+>
+  <BrowserRouter>
+    <Switch>
+      <Route
+        component={<React.Fragment />}
+        exact={true}
+        path="/"
+      />
+      <Route
+        component={<React.Fragment />}
+        path="/profile"
+      />
+      <Route
+        component={<React.Fragment />}
+        path="/breathe"
+      />
+      <Route
+        component={<React.Fragment />}
+        path="/settings"
+      />
+      <Route
+        component={<React.Fragment />}
+        path="/edit-settings"
+      />
+      <Route
+        component={<React.Fragment />}
+        path="/about-us"
+      />
+    </Switch>
+  </BrowserRouter>
+</div>
 `;

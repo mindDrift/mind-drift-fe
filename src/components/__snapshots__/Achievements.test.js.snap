@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Achievements component renders empty Achievements 1`] = `
+<div
+  className="AchievementsContainer"
+>
+  <ul
+    className="Achievements"
+  />
+</div>
+`;
+
+exports[`Achievements component renders some achievements 1`] = `
+<div
+  className="AchievementsContainer"
+>
+  <ul
+    className="Achievements"
+  >
+    <li
+      key="1"
+    >
+      <img
+        src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/firstStepsicon.png"
+      />
+      <div>
+        <h3>
+          First Steps
+        </h3>
+        <p>
+          Congratulations, you have logged your first breathing session with mindDrift
+        </p>
+      </div>
+    </li>
+    <li
+      key="2"
+    >
+      <img
+        src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/streakTWO.png"
+      />
+      <div>
+        <h3>
+          2-Day Streak
+        </h3>
+        <p>
+          Congratulations, you completed a breathing session every day for the past 2 days!
+        </p>
+      </div>
+    </li>
+    <li
+      key="3"
+    >
+      <img
+        src="https://raw.githubusercontent.com/mindDrift/mind-drift-fe/dev/src/assets/streakFIVE.png"
+      />
+      <div>
+        <h3>
+          5-Day Streak
+        </h3>
+        <p>
+          Congratulations, you completed a breathing session every day for the past 2 days!
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>
+`;

@@ -16,9 +16,11 @@ const Achievements = ({ achieves }) => {
     );
   });
   return (
-    <ul className={styles.Achievements}>
-      {mappedAchieve}
-    </ul>
+    <div className={styles.AchievementsContainer}>
+      <ul className={styles.Achievements}>
+        {mappedAchieve}
+      </ul>
+    </div>
   );
 };
 

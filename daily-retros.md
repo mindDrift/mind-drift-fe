@@ -81,3 +81,25 @@
   - after the post route, chaining additional actions on that fed information into other Models (cross routes)
   - Auth0 ???
   - Settings - new vs edit (post vs. Put) ... and redux used judiciously
+
+- Narrative flow
+  - front end space
+    - psychology of the front end space: colors, clicks, minimalist look, gentle-ness
+      - fade in animations
+      - React Spring
+        - learning about the keyframes and the range
+        - integration with the settings
+    - Breathing page is the most interesting place on the front end
+      - It uses a blend of React hooks and Redux. Redux for settings that come from another page (needs global context). React hooks for internal timing of the animation based on the global settings
+  - session data and data over time
+    - how stats are displayed (impact to user)
+    - how we get the information through 2 clear pipelines
+      - in one pipeline, the information is growing all the time
+      - in the acheivements pipeline, the information is making occasional updates
+  - The back end space
+    - models and their interconnectedness
+      - the hidden users table
+    - achievements routes
+      - the general route and a route that is specialized to get new info for the toasts
+    - back end was pretty straightforward
+      - TBD if we want to talk about firebase and the backend security improvments

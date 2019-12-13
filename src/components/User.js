@@ -2,16 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './User.css';
 
-const User = ({ userName }) => {
+const User = ({ userName, image }) => {
   return (
     <div className={styles.User}>
-      <h2>Hello, {userName}</h2>
+      <img src={image} alt={userName} />
+      <h2>Hello, {userName}!</h2>
     </div>
   );
 };
 
 User.propTypes = {
-  picture: PropTypes.string,
+  image: PropTypes.string,
   userName: PropTypes.string.isRequired
 };
 

@@ -1,18 +1,29 @@
 .User {
-  margin: 2em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
   overflow: auto; 
   height: 100%; 
-  margin-bottom: 2em;
-  text-align: center;
+  margin: 2em;
+  margin-bottom: 1em;
 
   h2 {
     display: inline;
     font-family: Montserrat;
+    font-size: 1.5em;
     font-weight: 400;
-    font-size: 1em;
     text-transform: uppercase;
-    margin-left: .4em;
     color: var(--dark-blue);
+    margin-left: 1em;
   }
-  
+
+  img {
+    width: 35%;
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 1em;
+    border-radius: 50%;
+    border: 3px solid var(--light-green);
+  }
 }

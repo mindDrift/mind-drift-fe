@@ -19,11 +19,12 @@
   }
 
   img {
-    width: 35%;
-    max-width: 100px;
-    height: auto;
+    height: calc(80px + 1vw);
+    width: calc(80px + 1vw);
+    object-fit: cover;
     margin-bottom: 1em;
     border-radius: 50%;
     border: 3px solid var(--light-green);
+    background-color: var(--light-grey);
   }
 }

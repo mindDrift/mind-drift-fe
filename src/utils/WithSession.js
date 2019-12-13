@@ -2,10 +2,12 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { StyledFirebaseAuth } from 'react-firebaseui';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/auth';
 import Loading from '../components/Loading';
 import logo from '../assets/mindDriftIcon.png';
 import styles from './WithSession.css';
+
 
 const AuthorizeContext = createContext();
 

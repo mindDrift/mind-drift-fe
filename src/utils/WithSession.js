@@ -19,12 +19,13 @@ const config = {
 firebase.initializeApp(config);
 
 const uiConfig = {
-  singInFlow: 'popup',
+  signInFlow: 'popup',
   signInSuccessUrl: '/',
   signInOptions: [
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
     firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-    firebase.auth.TwitterAuthProvider.PROVIDER_ID
+    firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+    firebase.auth.EmailAuthProvider.PROVIDER_ID
   ],
   callbacks: {
     signInSuccessWithAuthResult: () => false
@@ -38,14 +39,12 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     return firebase.auth().onAuthStateChanged(user => {
       if(user) {
-        user.getIdToken()
-          .then(token => {
-            console.log(token);
-            // setToken(token);
-            setIsAuthenticated(true);
-          });
+        // user.getIdToken()
+        //   .then(token => {
+        //     setToken(token);
+        //     setIsAuthenticated(true);
+        //   });
         setUser(user);
-        console.log(user);
       }
       else {
         setIsAuthenticated(false);
@@ -73,7 +72,7 @@ export const useSession = () => {
 export const withSession = Comp => {
   return function WithSession(props) {
     const { loading, isAuthenticated } = useSession();
-    if(loading) return <Loading />;
+    if(loading) return <Loading loading={loading} />;
     if(!loading && !isAuthenticated) {
       return <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />;
     }

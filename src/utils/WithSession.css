@@ -1,0 +1,29 @@
+.WithSession {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30%;
+  img {
+    width: 100px;
+    height: auto;
+  }
+}
+
+.headerText {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  h2 {
+    font-family: Montserrat;
+    font-weight: 200;
+    font-size: 1.5em;
+    line-height: 1.6em;
+    color: var(--dark-blue);
+  }
+  h3 {
+    font-family: Damion;
+    font-weight: 700;
+    font-size: 1.9em;
+    color: var(--peach);
+  }
+}

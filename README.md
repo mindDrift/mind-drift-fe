@@ -19,7 +19,7 @@ Routes have been set up to track milestones for each user, including:
 * Total Session Time
 
 ## How It’s Built
-mindDrift's front-end was built using React and Redux. The back-end was built using Node.js, MongoDB, and Express. Our animations were created with the react-spring library. The back-end is deployed to Heroku, and the front-end is deployed to Netlify. 
+mindDrift's front-end was built using React, Redux, and react-spring. The back-end was built using Node.js, MongoDB, and Express. Our animations were created with the react-spring library. The back-end is deployed to Heroku, and the front-end is deployed to Netlify. 
 
 ## Our Team
 * Maeve Griffin

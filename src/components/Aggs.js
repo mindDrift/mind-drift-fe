@@ -41,8 +41,14 @@ const Aggs = ({ average, total, streak }) => {
 };
 
 Aggs.propTypes = {
-  average: PropTypes.object.isRequired,
-  total: PropTypes.object.isRequired,
+  average: PropTypes.shape({
+    time: PropTypes.number.isRequired,
+    type: PropTypes.string.isRequired,
+  }).isRequired,
+  total: PropTypes.shape({
+    time: PropTypes.number.isRequired,
+    type: PropTypes.string.isRequired,
+  }).isRequired,
   streak: PropTypes.number.isRequired
 };
 

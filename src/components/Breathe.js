@@ -20,17 +20,21 @@ const Breathe = ({ handleEndSession }) => {
   const durationArr = [inhale, holdIn, exhale, holdOut];
   const actionArr = ['inhale', 'hold', 'exhale', 'hold'];
 
-  const countdownTime = Math.max(0, durationArr[index] - counter);
+  const countdownTime = Math.max(0, durationArr[index] - counter - 1);
 
-  const { x } = useSpring({ from: { x: 0 }, x: state ? 1 : 0, config: { duration: (durationArr[index] * 1000) } });
+  const { animationDirection } = useSpring({ 
+    from: { animationDirection: 0 }, 
+    animationDirection: state ? 1 : 0, 
+    config: { duration: (durationArr[index] * 1000) } 
+  });
 
   useEffect(() => {
-    if(time > endTime) {
+    if(time >= endTime) {
       setEndSession(true);
       return;
     } 
 
-    if(counter > durationArr[index]) {
+    if(counter > durationArr[index] - 1) {
       setCounter(0);
       let nextIndex = (index + 1) % 4;
       if(durationArr[nextIndex] === 0) nextIndex++;
@@ -60,9 +64,9 @@ const Breathe = ({ handleEndSession }) => {
       <animated.div 
         className={styles.flowerContainer} 
         style={{
-          transform: x
+          transform: animationDirection
             .interpolate({ range: [0, 1], output: [.6, 1.4] })
-            .interpolate(x => `translateY(-${x * 3.7}em) scale(${x})`) //stretch up
+            .interpolate(animationDirection => `translateY(-${animationDirection * 3.7}em) scale(${animationDirection})`)
         }}>
         <animated.div 
           className={styles.midPetal}>
@@ -70,18 +74,18 @@ const Breathe = ({ handleEndSession }) => {
         <animated.div 
           className={styles.leftPetal} 
           style={{
-            transform: x
+            transform: animationDirection
               .interpolate({ range: [0, 1], output: [45, 85] })
-              .interpolate(x => `rotate(${x}deg)`),
+              .interpolate(animationDirection => `rotate(${animationDirection}deg)`),
             transformOrigin: 'bottom right'
           }} >
         </animated.div>
         <animated.div 
           className={styles.rightPetal} 
           style={{
-            transform: x
+            transform: animationDirection
               .interpolate({ range: [0, 1], output: [45, 5] })
-              .interpolate(x => `rotate(${x}deg)`),
+              .interpolate(animationDirection => `rotate(${animationDirection}deg)`),
             transformOrigin: 'bottom right'
           }}>
         </animated.div>
